@@ -1,5 +1,5 @@
 # 1.Áttekintés
-<h2>Funkcionális elemek:</h2>
+<h3>Funkcionális elemek:</h3>
 A rendszer alapvető funkciói a következők:
 
 Felhasználói regisztráció és bejelentkezés: A felhasználók saját fiókot hozhatnak létre, amelyhez egyedi azonosítóval, e-mail címmel és jelszóval férhetnek hozzá.
@@ -11,7 +11,7 @@ Kosár és rendeléskezelés: A felhasználók termékeket helyezhetnek a kosár
 Adminisztrátori funkciók: Az adminisztrátorok kezelhetik a termékeket, kategóriákat, felhasználókat, és megtekinthetik a leadott rendeléseket.
 
 
-<h2>Nem funkcionális követelmények:</h2>
+<h3>Nem funkcionális követelmények:</h3>
 A rendszernek biztosítania kell a következőket:
 
 Biztonság: Az adatbiztonság kiemelten fontos a felhasználói adatok, fizetési adatok, és a termékek biztonságos kezelése szempontjából. A jelszavakat biztonságos titkosítással kell tárolni.
@@ -21,7 +21,7 @@ Teljesítmény: A webshopnak képesnek kell lennie nagy mennyiségű termékek g
 Karbantarthatóság: A rendszernek modulárisnak és könnyen bővíthetőnek kell lennie, hogy az új funkciók és frissítések egyszerűen hozzáadhatók legyenek.
 
 
-<h2>Adatbázis követelmények:</h2>
+<h3>Adatbázis követelmények:</h3>
 Az adatbázis a webshop különböző funkcióit kiszolgáló táblákat fog tartalmazni. A főbb táblák a következők:
 
 Felhasználók táblája: Tárolja a regisztrált felhasználók adatait (azonosító, név, e-mail cím, jelszó).
