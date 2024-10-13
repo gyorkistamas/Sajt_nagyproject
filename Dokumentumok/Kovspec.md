@@ -49,13 +49,13 @@ A jelenlegi webshop rendszer egyszerű online termékértékesítési platformk�
 <li>A kosár funkció alapszinten működik, de nincs támogatva az elhagyott kosarak visszakeresése vagy a visszatérő vásárlók automatikus kosárba helyezése.</li>
 <li>A rendelési folyamat csak korlátozott fizetési lehetőségeket támogat (pl. kizárólag banki átutalás), és nincs integrált fizetési megoldás, mint például bankkártyás fizetés vagy PayPal.</li>
 </ul>
-<br>
+
 <h3>Adminisztrációs felület</h3>
 <ul>
 <li>Az adminisztrációs felület jelenleg nem teszi lehetővé a részletes riportok készítését a rendelések állapotáról, a forgalom elemzásáről, vagy a legkeresettebb termékekről.</li>
 <li>Hiányzik egy fejlett felhasználókezelő rendszer, amely lehetővé tenné az adminisztrátorok számára, hogy különböző jogosoltsági szinteket állítsanak be.</li>
 </ul>
-<br>
+
 <h3>Adatbázis struktúra</h3>
 A webshop adatbázisának jelenlegi felépítése nem skálázható, és nem optimalizált a rendszer növekvő igényeihez. Az adatbázis struktúrájának jelenlegi jellemzői a következők:
 <br>
