@@ -131,6 +131,30 @@ A webshop célja, hogy felhasználóbarát környezetet biztosítson, ahol a fel
 
 # 4.Jelenlegi üzleti folyamatok modellje
 
+Célunk a folyamatok optimalizálása és a hatékonyság növelése.
+<h3>Jelenlegi üzleti folyamatok</h3>
+<h4>Termékkezelés</h4>
+<ul>
+<li>Termékek hozzáadása: Az adminisztrátorok manuálisan töltik fel a termékadatokat (név, leírás, ár, kép)</li>
+<li>Készletkezelés: A termékek elérhetősége nyomon követhető, és automatikusan frissül, ha a vásárlások során változik</li>
+</ul>
+<h4>Vásárlási folyamat</h4>
+<ul>
+<li>Kosár: A felhasználók termékeket helyeznek a kosárba. A kosár tartalma ideiglenesen tárolódik az adatbázisban</li>
+<li>Pénztár: A felhasználók megadják szállítási és számlázási adataikat, majd választhatnak a különböző fizetési módok közül</li>
+</ul>
+<h4>Megrendelés feldolgozása</h4>
+<ul>
+<li>Megrendelések tárolása: Az adatbázisban minden megrendelés rögzítésre kerül, beleértve a vásárló adatait, a kiválasztott termékek , és a tranzakciós részleteket</li>
+<li>Visszaigazolás: A vásárlók e-mailben kapják meg a megrendelés visszaigazolását</li>
+</ul>
+<h3>Adatbázis modell</h3>
+<h4>Adatbázis struktúra</h4>
+
+
+
+
+
 
 # 5.Igényelt üzleti folyamatok modellje
 
