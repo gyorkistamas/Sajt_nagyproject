@@ -67,6 +67,67 @@ A webshop adatbázisának jelenlegi felépítése nem skálázható, és nem opt
 </ul>
 
 # 3.Vágyálom rendszer
+A webshop célja, hogy felhasználóbarát környezetet biztosítson, ahol a felhasználók könnyen kereshetnek és vásárolhatnak különböző termékek.
+
+<h3>Célok</h3>
+<ul>
+<li>Felhasználói élmény javítása</li>
+<li>Termékek egyszerű kereshetősége</li>
+<li>Zökkenőmentes vásárlási folyamat biztosítása</li>
+<li>Hatékony ügyfélszolgálat</li>
+</ul>
+<h3>Funkcionális követelmények</h3>
+<h4>Felhasználói regisztráció és bejelentkezés</h4>
+<ul>
+<li>Regisztrációs űrlap a felhasználói adatok megadásához</li>
+<li>Bejelentkezési lehetőség e-mail cím és jelszó alapján</li>
+<li>Jelszó helyreállítási funkció</li>
+</ul>
+<h4>Termékkezelés</h4>
+<ul>
+<li>Termékek hozzáadása, módosítása és törlése</li>
+<li>Termékkategóriák létrehozása és kezelése</li>
+<li>Termékek keresése szűrők segítségével (ár, népszerűség, értékelés)</li>
+</ul>
+<h4>Kosár és vásárlás</h4>
+<ul>
+<li>Termékek kosárba helyezésének lehetősége</li>
+<li>Kosár tartalmának megtekintése és módosítása</li>
+<li>Vásárlási folyamat lépései (szállítási adatok, fizetési mód választása)<li>
+</ul>
+<h4>Fizetési lehetőségek</h4>
+ <ul>
+ <li>Különböző fizetési módok támogatása (bankkártya, Paypal, átutalás)</li>
+ <li>Biztonságos tranzakciók biztosítása</li>
+ </ul>
+<h4>Ügyfélszolgálat</h4>
+<ul>
+<li>Kapcsolati űrlap és élő chat lehetőség</li>
+<li>Gyakran ismételt kérdések (GYIK) szekció</li>
+</ul>
+<h3>Nem funkcionális követelmények</h3>
+<h4>Teljesítmény</h4>
+<ul>
+<li>A webshopnak 3 másodpercen belül kell betöltődnie</li>
+</ul>
+
+<h4>Biztonság</h4>
+<ul>
+<li>Adatok titkosítása és biztonságos tárolása</li>
+<li>Rendszeres biztonsági frissítések</li>
+</ul>
+
+<h4>Skalabilitás</h4>
+<ul>
+<li>A rendszernek képesnek kell lennie a felhasználók és termékek számának növekedésére</li>
+</ul>
+<h3>Képességek és technológiák</h3>
+<ul>
+<li>Webfejlesztési keretrendszerek (pl. Laravel, React, DJango)</li>
+<li>Adatbázis-kezelés (pl. sqllite)</li>
+<li>Felhő alapú tárolás és hosztolás</li>
+</ul>
+
 
 # 4.Jelenlegi üzleti folyamatok modellje
 
