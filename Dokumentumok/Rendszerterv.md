@@ -171,108 +171,108 @@ Legújabb írásaink a sajt világából:
     
 # 8. Adatbázis terv
  ## auth_user
- |id  |INT  |A felhasználó indexelése  |
- |password  |varchar(128) |A felhasználó sha256-os kódolásba mentett jelszava  |
- |last_login  |datetime |A felhasználó utolsó bejelentkezésének ideje  |
- |is_superuser  |bool |A felhasználó admin jogusultsága |
- |username  |varchar(150) |A felhasználó felhasználóneve  |
- |email |varchar(254) |A felhasználó email címe |
- |is_staff  |bool |A felhasználó moderátori jogusultsága  |
- |is_active |bool |A felhasználó fiókjának elérhetősége |
- |date_joined |datetime |A felhasználó fiókjának létrehozásának időpontja |
+ | id                                                                    | INT                                                             | A felhasználó indexelése |   |   |
+| password                                                              | varchar(128) A felhasználó sha256-os kódolásba mentett jelszava |                          |   |   |
+| last_login                                                            | datetime A felhasználó utolsó bejelentkezésének ideje           |                          |   |   |
+| is_superuser                                                          | bool A felhasználó admin jogusultsága                           |                          |   |   |
+| username                                                              | varchar(150) A felhasználó felhasználóneve                      |                          |   |   |
+| email varchar(254) A felhasználó email címe                           |                                                                 |                          |   |   |
+| is_staff                                                              | bool A felhasználó moderátori jogusultsága                      |                          |   |   |
+| is_active bool A felhasználó fiókjának elérhetősége                   |                                                                 |                          |   |   |
+| date_joined datetime A felhasználó fiókjának létrehozásának időpontja |                                                                 |                          |   |   |
 
  ## auth_group
- |id  |INT  |A csoport indexe |
- |name  |varchar(150) |A csoport neve |
+ id  INT  A csoport indexe 
+ name  varchar(150) A csoport neve 
 
  ## auth_user_groups
- |id  |INT  |A felhasználó felhasználói csoportja |
- |user_id |INT  |A felhasználó indexe |
- |group_id  |INT  |A csoport indexe |
+ id  INT  A felhasználó felhasználói csoportja 
+ user_id INT  A felhasználó indexe 
+ group_id  INT  A csoport indexe 
 
  ## auth_permission
- |id  |INT  |A jog indexe |
- |content_type_id |INT  |A hozzáférés típusának indexe  |
- |name  |varchar(255) |A hozzáférés megnevezése |
+ id  INT  A jog indexe 
+ content_type_id INT  A hozzáférés típusának indexe  
+ name  varchar(255) A hozzáférés megnevezése 
 
  ## auth_group_permission
- |id  |INT  |A hozzáférési csoport rekord indexe  |
- |group_id  |INT  |A hozzáféréshez hozzárendelt csoport indexe  |
- |permission_id |INT  |A hozzáférés szintjének az indexe  |
+ id  INT  A hozzáférési csoport rekord indexe  
+ group_id  INT  A hozzáféréshez hozzárendelt csoport indexe  
+ permission_id INT  A hozzáférés szintjének az indexe  
 
  ## django_session
- |session_key |varchar(40)  |A felhasználó session kulcsa |
- |session_data  |text |A felhasználó adata  |
- |expire_date |datetime |A kulcs lejárásának időpontja  |
+ session_key varchar(40)  A felhasználó session kulcsa 
+ session_data  text A felhasználó adata  
+ expire_date datetime A kulcs lejárásának időpontja  
 
  ## sajtnagy_cart
- |id  |INT  |A kosár indexe |
- |quantity  |INT  |Az adott termék darabszáma |
- |created_at  |datetime |A kosárhoz adás időpontja  |
- |updated_at  |datetime |A frissítés időpontja  |
- |user_id |INT  |A felhasználó indexe |
- |product_id  |INT  |A hozzáadott termék indexe |
+ id  INT  A kosár indexe 
+ quantity  INT  Az adott termék darabszáma 
+ created_at  datetime A kosárhoz adás időpontja  
+ updated_at  datetime A frissítés időpontja  
+ user_id INT  A felhasználó indexe 
+ product_id  INT  A hozzáadott termék indexe 
 
  ## sajtnagy_product
- |id  |INT  |A termék azonosítója |
- |name  |varchar(255) |A termék neve  |
- |description |text |A termék leírása |
- |price |INT  |A termék ára |
- |stock |INT  |A termék rendelkezésre álló darabszáma |
- |created_at  |datetime |A termék létrehozásának időpontja  |
- |updated_at  |datetime |A termék frissítésének időpontja |
- |category_id |INT  |A termék kategóriájának az azonosítója |
+ id  INT  A termék azonosítója 
+ name  varchar(255) A termék neve  
+ description text A termék leírása 
+ price INT  A termék ára 
+ stock INT  A termék rendelkezésre álló darabszáma 
+ created_at  datetime A termék létrehozásának időpontja  
+ updated_at  datetime A termék frissítésének időpontja 
+ category_id INT  A termék kategóriájának az azonosítója 
 
  ## sajtnagy_category
- |id  |INT  |A kategória azonosítója  |
- |name  |varchar(255) |A kategória neve |
- |description |text |A kategória leírása  |
+ id  INT  A kategória azonosítója  
+ name  varchar(255) A kategória neve 
+ description text A kategória leírása  
 
  ## sajtnagy_order
- |id  |INT  |A rendelés azonosítója |
- |total_price |INT  |A rendelés összege |
- |status  |INT  |A rendelés státusza  |
- |created_at  |datetime |A rendelés létrehozásának időpontja  |
- |updated_at  |datetime |A rendelés módosításának időpontja |
- |user_id |INT  |A rendelés létrehozójának az indexe  |
- |address |varchar(255) |A rendelés létrehozójának címe |
- |city  |varchar(255) |A rendelés létrehozójának városa |
- |first_name  |varchar(255) |A rendelés létrehozójának vezetékneve  |
- |last_name |varchar(255) |A rendelés létrehozójának keresztneve  |
- |payment_method  |INT  |A fizetés típusa |
- |state |varchar(100) |A rendelő megyéje  |
- |zipcode |varchar(10)  |A rendelő irányítószáma  |
+ id  INT  A rendelés azonosítója 
+ total_price INT  A rendelés összege 
+ status  INT  A rendelés státusza  
+ created_at  datetime A rendelés létrehozásának időpontja  
+ updated_at  datetime A rendelés módosításának időpontja 
+ user_id INT  A rendelés létrehozójának az indexe  
+ address varchar(255) A rendelés létrehozójának címe 
+ city  varchar(255) A rendelés létrehozójának városa 
+ first_name  varchar(255) A rendelés létrehozójának vezetékneve  
+ last_name varchar(255) A rendelés létrehozójának keresztneve  
+ payment_method  INT  A fizetés típusa 
+ state varchar(100) A rendelő megyéje  
+ zipcode varchar(10)  A rendelő irányítószáma  
 
  ## sajtnagy_orderitem
- |id  |INT  |A rendelésben szereplő termék rendelésének azonosítója |
- |quantity |INT |A rendelésben szereplő termék rendelt mennyisége |
- |price |INT  |A rendelésben szereplő termék ára  |
- |created_at  |datetime |A rendelésben szereplő termék rendelésének dátuma  |
- |updated_at |datetime  |A rendelésben szereplő termék rendelésének frissítés |
- |order_id  |INT  |A rendelés azonosítója |
- |product_id  |INT  |A rendelt termék azonosítója |
+ id  INT  A rendelésben szereplő termék rendelésének azonosítója 
+ quantity INT A rendelésben szereplő termék rendelt mennyisége 
+ price INT  A rendelésben szereplő termék ára  
+ created_at  datetime A rendelésben szereplő termék rendelésének dátuma  
+ updated_at datetime  A rendelésben szereplő termék rendelésének frissítés 
+ order_id  INT  A rendelés azonosítója 
+ product_id  INT  A rendelt termék azonosítója 
 
  ## sajtnagy_payment
- |id  |INT  |A rendelés fizetésének indexe  |
- |payment_method  |INT  |A fizetés típusa |
- |payment_status  |INT  |A fizetés státusza |
- |payment_date  |datetime |A fizetés időpontja  |
- |order_id  |INT  |A rendelés azonosítója |
+ id  INT  A rendelés fizetésének indexe  
+ payment_method  INT  A fizetés típusa 
+ payment_status  INT  A fizetés státusza 
+ payment_date  datetime A fizetés időpontja  
+ order_id  INT  A rendelés azonosítója 
 
  ## sajtnagy_review
- |id  |INT  |A vélemény azonosítója |
- |rating  |INT  |A termék értékelése  |
- |comment |text |A vélemény tartalma  |
- |created_at  |datetime |A vélemény közlésének időpontja  |
- |product_id  |INT  |Az értékelt termék azonosítója |
- |user_id |INT  |A vélemény létrehozójának azonosítója  |
+ id  INT  A vélemény azonosítója 
+ rating  INT  A termék értékelése  
+ comment text A vélemény tartalma  
+ created_at  datetime A vélemény közlésének időpontja  
+ product_id  INT  Az értékelt termék azonosítója 
+ user_id INT  A vélemény létrehozójának azonosítója  
 
  ## sajtnagy_promo
- |id  |INT  |A promóciós kód azonosítója  |
- |promo_code_sha256 |varchar(64)  |A promóciós kód sha256-os hash kódja |
- |expiry_date |datetime |A promóciós kód lejárásának időpontja  |
- |discount  |DECIMAL  |A promócióval járó árlevonás mennyisége  |
- |user_id |INT  |Ha a promóciós kód csak egy felhasználónak érvényes, akkor neki az azonosítója |
+ id  INT  A promóciós kód azonosítója  
+ promo_code_sha256 varchar(64)  A promóciós kód sha256-os hash kódja 
+ expiry_date datetime A promóciós kód lejárásának időpontja  
+ discount  DECIMAL  A promócióval járó árlevonás mennyisége  
+ user_id INT  Ha a promóciós kód csak egy felhasználónak érvényes, akkor neki az azonosítója 
 
 # 9. Implementációs terv
 
