@@ -148,8 +148,7 @@ Célunk a folyamatok optimalizálása és a hatékonyság növelése.
 - Megrendelések tárolása: Az adatbázisban minden megrendelés rögzítésre kerül, beleértve a vásárló adatait, a kiválasztott termékek , és a tranzakciós részleteket
 - Visszaigazolás: A vásárlók e-mailben kapják meg a megrendelés visszaigazolását
 
-### Adatbázis modell
-#### Adatbázis struktúra
+
 
 
 
