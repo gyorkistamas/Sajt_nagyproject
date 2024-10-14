@@ -171,16 +171,15 @@ Legújabb írásaink a sajt világából:
     
 # 8. Adatbázis terv
  ## auth_user
- | id                                                                    | INT                                                             | A felhasználó indexelése |   |   |
-| password                                                              | varchar(128) A felhasználó sha256-os kódolásba mentett jelszava |                          |   |   |
-| last_login                                                            | datetime A felhasználó utolsó bejelentkezésének ideje           |                          |   |   |
-| is_superuser                                                          | bool A felhasználó admin jogusultsága                           |                          |   |   |
-| username                                                              | varchar(150) A felhasználó felhasználóneve                      |                          |   |   |
-| email varchar(254) A felhasználó email címe                           |                                                                 |                          |   |   |
-| is_staff                                                              | bool A felhasználó moderátori jogusultsága                      |                          |   |   |
-| is_active bool A felhasználó fiókjának elérhetősége                   |                                                                 |                          |   |   |
-| date_joined datetime A felhasználó fiókjának létrehozásának időpontja |                                                                 |                          |   |   |
-
+|      id      |      **INT**     |              A felhasználó indexelése              |
+|   password   | **varchar(128)** | A felhasználó sha256-os kódolásba mentett jelszava |
+|  last_login  |   **datetime**   |    A felhasználó utolsó bejelentkezésének ideje    |
+| is_superuser |     **bool**     |          A felhasználó admin jogusultsága          |
+|   username   | **varchar(150)** |            A felhasználó felhasználóneve           |
+|    email     | **varchar(254)** |              A felhasználó email címe              |
+|   is_staff   |     **bool**     |        A felhasználó moderátori jogusultsága       |
+|  is_active   |     **bool**     |        A felhasználó fiókjának elérhetősége        |
+| date_joined  |   **datetime**   |  A felhasználó fiókjának létrehozásának időpontja  |
  ## auth_group
  id  INT  A csoport indexe 
  name  varchar(150) A csoport neve 
