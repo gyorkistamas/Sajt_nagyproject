@@ -67,6 +67,23 @@ A webshop adatbázisának jelenlegi felépítése nem skálázható, és nem opt
 </ul>
 
 # 3.Vágyálom rendszer
+A webshop célja, hogy felhasználóbarát környezetet biztosítson, ahol a felhasználók könnyen kereshetnek és vásárolhatnak különböző termékek.
+
+<h3>Célok</h3>
+<ul>
+<li>Felhasználói élmény javítása</li>
+<li>Termékek egyszerű kereshetősége</li>
+<li>Zökkenőmentes vásárlási folyamat biztosítása</li>
+<li>Hatékony ügyfélszolgálat</li>
+</ul>
+<h3>Funkcionális követelmények</h3>
+<h4>Felhasználói regisztráció és bejelentkezés</h4>
+<ul>
+<li>Regisztrációs űrlap a felhasználói adatok megadásához</li>
+<li>Bejelentkezési lehetőség e-mail cím és jelszó alapján</li>
+<li>Jelszó helyreállítási funkció</li>
+</ul>
+<h4>Termékkezelés</h4>
 
 # 4.Jelenlegi üzleti folyamatok modellje
 
