@@ -156,6 +156,21 @@ Célunk a folyamatok optimalizálása és a hatékonyság növelése.
 
 
 # 5.Igényelt üzleti folyamatok modellje
+A webshop célja egy felhasználóbarát online kereskedelmi platform biztosítása, ahol a vásárlók könnyedén böngészhetnek termékek között, vásárlásokat bonyolíthatnak le, és nyomon követhetik megrendeléseiket. 
+A rendszer adatbázissal rendelkezik, amely a termékek, vásárlók és tranzakciók adatait kezeli.
+
+### Funkcionális követelmények
+#### Felhasználói fiókok
+- Regisztráció: A felhasználók e-mail címük és jelszavuk megadásával regisztrálhatnak a webshopba.
+- Bejelentkezés: A regisztrált felhasználók biztonságos bejelentkezési lehetőséggel rendelkeznek.
+- Felhasználói profil kezelése: A felhasználók módosíthatják személyes adataikat (név, cím, elérhetőségek).
+#### Termékek kezelése
+- Terméklistázás: A webshopban minden termék kategóriákba sorolva jelenik meg, keresési és szűrési lehetőséggel.
+- Termékadatok megjelenítése: Minden termékhez részletes adatokat kell megadni (név, ár, leírás, elérhetőség, képek).
+- Kosár funkció: A felhasználók a kiválasztott termékeket kosárba helyezhetik.
+#### Rendelések kezelése
+- Vásárlási folyamat: A felhasználó kiválaszthatja a fizetési módot (online bankkártyás fizetés, utánvét) és szállítási lehetőségeket (háztól házig, csomagpontra).
+- Megrendelés követése: A felhasználók rendeléseik állapotát követhetik a felhasználói fiókjukban.
 
 # 6.Követelménylista
 
