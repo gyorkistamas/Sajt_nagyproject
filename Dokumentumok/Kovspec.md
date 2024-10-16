@@ -171,7 +171,23 @@ A rendszer adatbázissal rendelkezik, amely a termékek, vásárlók és tranzak
 #### Rendelések kezelése
 - Vásárlási folyamat: A felhasználó kiválaszthatja a fizetési módot (online bankkártyás fizetés, utánvét) és szállítási lehetőségeket (háztól házig, csomagpontra).
 - Megrendelés követése: A felhasználók rendeléseik állapotát követhetik a felhasználói fiókjukban.
+### Adatbázis követelmények
+- Terméktáblázat: A termékek adatai (ID, név, leírás, ár, elérhetőség, kategória).
+- Felhasználók táblázat: A regisztrált felhasználók adatai (ID, név, e-mail, jelszó).
+- Rendelések táblázat: A leadott rendelésekkel kapcsolatos adatok (ID, felhasználó ID, termékek, rendelési dátum, összeg).
+- Szállítás és fizetés: A szállítási címek és fizetési adatok kezelésére külön táblák (felhasználóhoz és rendeléshez kapcsolva).
 
+### Nem funkcionális követelmények
+#### Teljesítmény
+- A webshopnak gyors válaszidőkkel kell működnie, különösen a keresési funkció és a kosár frissítése esetén.
+#### Biztonság
+- Minden adatátvitel biztonságos csatornákon (HTTPS) keresztül történik.
+- A felhasználói jelszavak titkosítva tárolódnak az adatbázisban.
+#### Skálázhatóság
+- Az adatbázis és az alkalmazás szerver képes legyen nagy felhasználószám kezelésére és nagy termékválaszték kezelésére.
+#### Felhasználói szerepkörök
+- Adminisztrátor: Az adminisztrátorok hozzáférhetnek a teljes adatbázishoz, kezelhetik a termékeket, felhasználókat, valamint a rendelések állapotát.
+- Felhasználó: A regisztrált vásárlók böngészhetik a termékeket, vásárlásokat bonyolíthatnak, és követhetik rendeléseiket.
 # 6.Követelménylista
 
 # 7.Fogalomtár
