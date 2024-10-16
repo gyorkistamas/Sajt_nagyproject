@@ -185,9 +185,19 @@ A rendszer adatbázissal rendelkezik, amely a termékek, vásárlók és tranzak
 - A felhasználói jelszavak titkosítva tárolódnak az adatbázisban.
 #### Skálázhatóság
 - Az adatbázis és az alkalmazás szerver képes legyen nagy felhasználószám kezelésére és nagy termékválaszték kezelésére.
-#### Felhasználói szerepkörök
+### Felhasználói szerepkörök
 - Adminisztrátor: Az adminisztrátorok hozzáférhetnek a teljes adatbázishoz, kezelhetik a termékeket, felhasználókat, valamint a rendelések állapotát.
 - Felhasználó: A regisztrált vásárlók böngészhetik a termékeket, vásárlásokat bonyolíthatnak, és követhetik rendeléseiket.
+
+### Üzleti folyamatok modellje
+Az üzleti folyamatok a következő lépésekre bonthatók:
+
+- Felhasználói regisztráció: A felhasználó létrehoz egy fiókot a webshopban.
+- Termékek böngészése: A felhasználó keres a webshop termékei között.
+- Vásárlási folyamat: A felhasználó a fizetési és szállítási információk megadásával véglegesíti a vásárlást.
+- Rendelés feldolgozása: Az adminisztrátor a háttérrendszeren keresztül kezeli a rendeléseket és szállítást.
+- Megrendelés követése: A felhasználó nyomon követi a rendelése állapotát.
+
 # 6.Követelménylista
 
 # 7.Fogalomtár
