@@ -171,7 +171,7 @@ Legújabb írásaink a sajt világából:
 # 8. Adatbázis terv
 
 ## Felhasználói táblák 
-| AUTH_USER
+| AUTH_USER |
 | :------------: | :------------: |
 | id            | **INT**           | A felhasználó indexelése                        |
 | password      | **varchar(128)**  | A felhasználó sha256-os kódolásba mentett jelszava |
@@ -183,30 +183,30 @@ Legújabb írásaink a sajt világából:
 | is_active     | **bool**          | A felhasználó fiókjának elérhetősége            |
 | date_joined   | **datetime**      | A felhasználó fiókjának létrehozásának időpontja|
 
-| AUTH_GROUP
+| AUTH_GROUP |
 | :------------: | :------------: |
 | id            | **INT**           | A csoport indexe                                |
 | name          | **varchar(150)**  | A csoport neve                                  |
 
-| AUTH_USER_GROUPS
+| AUTH_USER_GROUPS |
 | :------------: | :------------: |
 | id            | **INT**           | A felhasználó felhasználói csoportja            |
 | group_id      | **INT**           | A csoport indexe                                |
 | user_id       | **INT**           | A felhasználó indexe                            |
 
-| AUTH_PERMISSIOM
+| AUTH_PERMISSION |
 | :------------: | :------------: |
 | id            | **INT**           | A jog indexe                                    |
 | content_type_id | **INT**         | A hozzáférés típusának indexe                   |
 | name          | **varchar(255)**  | A hozzáférés megnevezése                        |
 
-| AUTH_GROUP_PERMISSION
+| AUTH_GROUP_PERMISSION |
 | :------------: | :------------: |
 | id            | **INT**           | A hozzáférési csoport rekord indexe             |
 | group_id      | **INT**           | A hozzáféréshez hozzárendelt csoport indexe     |
 | permission_id | **INT**           | A hozzáférés szintjének az indexe               |
 
-| DJANGO_SESSION 
+| DJANGO_SESSION |
 | :------------: | :------------: |
 | session_key   | **varchar(40)**   | A felhasználó session kulcsa                    |
 | session_data  | **text**          | A felhasználó adata                             |
@@ -214,7 +214,7 @@ Legújabb írásaink a sajt világából:
 
 ## Termékek és fizetés
 
-| **SAJTNAGY_CART**
+| **SAJTNAGY_CART** |
 | :------------: | :------------: |
 | id            | **INT**           | A kosár indexe                                  |
 | quantity      | **INT**           | Az adott termék darabszáma                      |
@@ -223,7 +223,7 @@ Legújabb írásaink a sajt világából:
 | user_id       | **INT**           | A felhasználó indexe                            |
 | product_id    | **INT**           | A hozzáadott termék indexe                      |
 
-| **SAJTNAGY_PRODUCT**
+| **SAJTNAGY_PRODUCT** |
 | :------------: | :------------: |
 | id            | **INT**           | A termék azonosítója                            |
 | name          | **varchar(255)**  | A termék neve                                   |
@@ -234,13 +234,13 @@ Legújabb írásaink a sajt világából:
 | updated_at    | **datetime**      | A termék frissítésének időpontja                |
 | category_id   | **INT**           | A termék kategóriájának az azonosítója          |
 
-| **SAJTNAGY_CATEGORY**
+| **SAJTNAGY_CATEGORY** |
 | :------------: | :------------: |
 | id            | **INT**           | A kategória azonosítója                         |
 | name          | **varchar(255)**  | A kategória neve                                |
 | description   | **text**          | A kategória leírása                             |
 
-| **SAJTNAGY_ORDER**
+| **SAJTNAGY_ORDER** |
 | :------------: | :------------: |
 | id            | **INT**           | A rendelés azonosítója                          |
 | total_price   | **INT**           | A rendelés összege                              |
@@ -256,7 +256,7 @@ Legújabb írásaink a sajt világából:
 | state         | **varchar(100)**  | A rendelő megyéje                               |
 | zipcode       | **varchar(10)**   | A rendelő irányítószáma                         |
 
-| **SAJTNAGY_ORDERITEM**
+| **SAJTNAGY_ORDERITEM** |
 | :------------: | :------------: |
 | id            | **INT**           | A rendelésben szereplő termék rendelésének azonosítója |
 | quantity      | **INT**           | A rendelésben szereplő termék rendelt mennyisége       |
@@ -266,7 +266,7 @@ Legújabb írásaink a sajt világából:
 | order_id      | **INT**           | A rendelés azonosítója                                 |
 | product_id    | **INT**           | A rendelt termék azonosítója                           |
 
-| **SAJTNAGY_PAYMENT**
+| **SAJTNAGY_PAYMENT** |
 | :------------: | :------------: |
 | id            | **INT**           | A rendelés fizetésének indexe                        |
 | payment_method | **INT**          | A fizetés típusa                                     |
@@ -274,7 +274,7 @@ Legújabb írásaink a sajt világából:
 | payment_date  | **datetime**      | A fizetés időpontja                                  |
 | order_id      | **INT**           | A rendelés azonosítója                               |
 
-| **SAJTNAGY_REVIEW**
+| **SAJTNAGY_REVIEW** |
 | :------------: | :------------: |
 | id            | **INT**           | A vélemény azonosítója                               |
 | rating        | **INT**           | A termék értékelése                                  |
@@ -283,7 +283,7 @@ Legújabb írásaink a sajt világából:
 | product_id    | **INT**           | Az értékelt termék azonosítója                       |
 | user_id       | **INT**           | A vélemény létrehozójának azonosítója                |
 
-| **SAJTNAGY_PROMO**
+| **SAJTNAGY_PROMO** |
 | :------------: | :------------: |
 | id                | **INT**           | A promóciós kód azonosítója                        |
 | promo_code_sha256 | **varchar(64)**    | A promóciós kód sha256-os hash kódja               |
