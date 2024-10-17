@@ -172,7 +172,7 @@ Legújabb írásaink a sajt világából:
 
 ## Felhasználói táblák 
 | AUTH_USER |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A felhasználó indexelése                        |
 | password      | **varchar(128)**  | A felhasználó sha256-os kódolásba mentett jelszava |
 | last_login    | **datetime**      | A felhasználó utolsó bejelentkezésének ideje    |
@@ -184,30 +184,30 @@ Legújabb írásaink a sajt világából:
 | date_joined   | **datetime**      | A felhasználó fiókjának létrehozásának időpontja|
 
 | AUTH_GROUP |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A csoport indexe                                |
 | name          | **varchar(150)**  | A csoport neve                                  |
 
 | AUTH_USER_GROUPS |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A felhasználó felhasználói csoportja            |
 | group_id      | **INT**           | A csoport indexe                                |
 | user_id       | **INT**           | A felhasználó indexe                            |
 
 | AUTH_PERMISSION |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A jog indexe                                    |
 | content_type_id | **INT**         | A hozzáférés típusának indexe                   |
 | name          | **varchar(255)**  | A hozzáférés megnevezése                        |
 
 | AUTH_GROUP_PERMISSION |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A hozzáférési csoport rekord indexe             |
 | group_id      | **INT**           | A hozzáféréshez hozzárendelt csoport indexe     |
 | permission_id | **INT**           | A hozzáférés szintjének az indexe               |
 
 | DJANGO_SESSION |
-| :------------: | :------------: |
+|------------|------------|------------|
 | session_key   | **varchar(40)**   | A felhasználó session kulcsa                    |
 | session_data  | **text**          | A felhasználó adata                             |
 | expire_date   | **datetime**      | A kulcs lejárásának időpontja                   |
@@ -215,7 +215,7 @@ Legújabb írásaink a sajt világából:
 ## Termékek és fizetés
 
 | **SAJTNAGY_CART** |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A kosár indexe                                  |
 | quantity      | **INT**           | Az adott termék darabszáma                      |
 | created_at    | **datetime**      | A kosárhoz adás időpontja                       |
@@ -224,7 +224,7 @@ Legújabb írásaink a sajt világából:
 | product_id    | **INT**           | A hozzáadott termék indexe                      |
 
 | **SAJTNAGY_PRODUCT** |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A termék azonosítója                            |
 | name          | **varchar(255)**  | A termék neve                                   |
 | description   | **text**          | A termék leírása                                |
@@ -235,13 +235,13 @@ Legújabb írásaink a sajt világából:
 | category_id   | **INT**           | A termék kategóriájának az azonosítója          |
 
 | **SAJTNAGY_CATEGORY** |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A kategória azonosítója                         |
 | name          | **varchar(255)**  | A kategória neve                                |
 | description   | **text**          | A kategória leírása                             |
 
 | **SAJTNAGY_ORDER** |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A rendelés azonosítója                          |
 | total_price   | **INT**           | A rendelés összege                              |
 | status        | **INT**           | A rendelés státusza                             |
@@ -257,7 +257,7 @@ Legújabb írásaink a sajt világából:
 | zipcode       | **varchar(10)**   | A rendelő irányítószáma                         |
 
 | **SAJTNAGY_ORDERITEM** |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A rendelésben szereplő termék rendelésének azonosítója |
 | quantity      | **INT**           | A rendelésben szereplő termék rendelt mennyisége       |
 | price         | **INT**           | A rendelésben szereplő termék ára                      |
@@ -267,7 +267,7 @@ Legújabb írásaink a sajt világából:
 | product_id    | **INT**           | A rendelt termék azonosítója                           |
 
 | **SAJTNAGY_PAYMENT** |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A rendelés fizetésének indexe                        |
 | payment_method | **INT**          | A fizetés típusa                                     |
 | payment_status | **INT**          | A fizetés státusza                                   |
@@ -275,7 +275,7 @@ Legújabb írásaink a sajt világából:
 | order_id      | **INT**           | A rendelés azonosítója                               |
 
 | **SAJTNAGY_REVIEW** |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id            | **INT**           | A vélemény azonosítója                               |
 | rating        | **INT**           | A termék értékelése                                  |
 | comment       | **text**          | A vélemény tartalma                                  |
@@ -284,7 +284,7 @@ Legújabb írásaink a sajt világából:
 | user_id       | **INT**           | A vélemény létrehozójának azonosítója                |
 
 | **SAJTNAGY_PROMO** |
-| :------------: | :------------: |
+|------------|------------|------------|
 | id                | **INT**           | A promóciós kód azonosítója                        |
 | promo_code_sha256 | **varchar(64)**    | A promóciós kód sha256-os hash kódja               |
 | expiry_date       | **datetime**       | A promóciós kód lejárásának időpontja              |
