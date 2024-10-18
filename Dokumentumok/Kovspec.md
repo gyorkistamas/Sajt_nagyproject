@@ -199,5 +199,53 @@ Az üzleti folyamatok a következő lépésekre bonthatók:
 - Megrendelés követése: A felhasználó nyomon követi a rendelése állapotát.
 
 # 6.Követelménylista
+### Felhasználói követelmények
+#### Regisztráció és bejelentkezés:
+
+- A felhasználóknak lehetősége kell legyen regisztrálni, illetve bejelentkezni a webshopba.
+- A regisztráció során kötelező mezők: felhasználónév, jelszó, e-mail cím, szállítási cím.
+- Bejelentkezés után a felhasználók hozzáférhetnek saját profiljukhoz és rendelési előzményeikhez.
+
+#### Termékböngészés és keresés:
+
+- A felhasználóknak lehetőségük kell legyen a termékek kategóriák szerinti böngészésére és keresésére.
+- A keresési eredmények szűrhetők különböző paraméterek alapján, mint ár, népszerűség vagy értékelések.
+
+
+#### Kosár és rendelés:
+
+- A felhasználók hozzáadhatják a termékeket a kosárhoz.
+- A kosárban lévő termékeket a felhasználók módosíthatják (törlés, mennyiség változtatása).
+- A rendelés véglegesítésénél a felhasználóknak meg kell adniuk a szállítási és fizetési adatokat.
+
+#### Értékelés és véleményezés:
+
+- A felhasználók értékelhetik a vásárolt termékeket, és véleményt írhatnak róluk.
+
+#### Profilkezelés:
+
+- A felhasználók módosíthatják személyes adataikat (név, cím, jelszó, stb.).
+- Megtekinthetik és nyomon követhetik korábbi rendeléseiket.
+
+
+### Funkcionális követelmények
+#### Termékkezelés:
+
+- Az adminisztrátori felület lehetővé teszi a termékek hozzáadását, módosítását és törlését.
+- Minden termékhez tartozó adatok: név, leírás, ár, kép, készlet mennyisége, kategória, értékelések.
+
+#### Felhasználókezelés:
+
+- Az adminisztrátorok kezelhetik a felhasználói fiókokat (pl. törlés, fiók felfüggesztése).
+
+#### Rendeléskezelés:
+
+- A rendszer automatikusan nyilvántartja a leadott rendeléseket, állapotukat (pl. folyamatban, teljesítve, törölve).
+- Az adminisztrátorok frissíthetik a rendelés állapotát, valamint kezelhetik a visszatérítéseket.
+
+#### Szállítási rendszer:
+
+- A felhasználóknak különböző szállítási lehetőségeket kell kínálni (pl. standard, expressz).
+- A rendszernek követnie kell a szállítási állapotokat, és értesítenie kell a felhasználót.
 
 # 7.Fogalomtár
