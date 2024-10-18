@@ -248,4 +248,15 @@ Az üzleti folyamatok a következő lépésekre bonthatók:
 - A felhasználóknak különböző szállítási lehetőségeket kell kínálni (pl. standard, expressz).
 - A rendszernek követnie kell a szállítási állapotokat, és értesítenie kell a felhasználót.
 
+### Rendszerkövetelmények
+
+#### Platform:
+- A webshopnak futnia kell minden modern böngészőn (pl. Chrome, Firefox, Edge).
+#### Adatbázis:
+- A rendszerhez MySQL vagy SQLLite adatbázist kell használni.
+#### Szerver követelmények:
+- A webshophoz PHP, Node.js vagy egyéb backend technológia szükséges.
+- Szükséges minimum egy VPS vagy dedikált szerver, amely támogatja a skálázható infrastruktúrát.
+
+
 # 7.Fogalomtár
