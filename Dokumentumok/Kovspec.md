@@ -34,12 +34,12 @@ Kategóriák táblája: A termékek kategorizálására szolgáló tábla, amely
 # 2.Jelenlegi helyzet
 
 A jelenlegi webshop rendszer egyszerű online termékértékesítési platformként működik, azonban számos olyan funkció és struktúra hiányzik belőle, amely a felhasználói élmény javításához, az adminisztráció hatékonyságának növeléséhez, valamint a biztonságos és skálázható adatkezeléshez szükséges.
-## Felhasználói fiók kezelés
+### Felhasználói fiók kezelés
 
 - Jelenleg a felhasználók fiók nélkül is böngészhetiok a termékeket, azonban a vásárláshoz regisztrációra van szükség. A regisztrációs folyamat alapvető információkat kér, de nincs lehetőség például jelszó-visszaállitásra vagy többféle belépési lehetőségre (pl. közösségi média fiókkal való belépés).
 - A felhasználói adatok biztonsága nem megfelelő, mivel a jelszavak nem titkosítottak, és nincs kétfaktoros hitelesítési (2FA) lehetőség.
 
-## Termékkatalógus és keresési funkciók
+### Termékkatalógus és keresési funkciók
 
 - A termékkatalógus egyszerű felépétísű, azonban a termékek kategorizálása és szűrése korlátozott. Jelenleg nincs több lehetőség több kritérium szerinti szűrésre (pl. ár, értékelések, készlet elérhetőség).
 - Az adminisztrátorok számára nincs megfelelő felület a termékek egyszerű kezelésére (pl. termékek tömeges importálása/exportálása), és az új termékek hozzáadása manuálisan történik.
