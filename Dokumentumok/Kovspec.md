@@ -261,5 +261,5 @@ Az üzleti folyamatok a következő lépésekre bonthatók:
 
 # 7.Fogalomtár
 
-- VPS:azaz virtuális dedikált szerver vagy virtuális privát szerver egy olyan virtuális számítógép, amelyet internetes tárhelyszolgáltatás részeként értékesítenek.
+- VPS: azaz virtuális dedikált szerver vagy virtuális privát szerver egy olyan virtuális számítógép, amelyet internetes tárhelyszolgáltatás részeként értékesítenek.
 - Skálázható infrastruktúra: A skálázható infrastruktúra olyan informatikai rendszer, amely képes hatékonyan bővülni vagy zsugorodni a terhelés vagy igények változásának megfelelően, anélkül hogy jelentős teljesítményromlás vagy probléma lépne fel. 
