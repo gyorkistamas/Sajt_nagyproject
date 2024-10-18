@@ -124,7 +124,7 @@ A webshop célja, hogy felhasználóbarát környezetet biztosítson, ahol a fel
 ### Képességek és technológiák
 
 - Webfejlesztési keretrendszerek (pl. Laravel, React, DJango)
-- Adatbázis-kezelés (pl. sqllite)
+- Adatbázis-kezelés (pl. sqlite)
 - Felhő alapú tárolás és hosztolás
 
 
@@ -253,10 +253,13 @@ Az üzleti folyamatok a következő lépésekre bonthatók:
 #### Platform:
 - A webshopnak futnia kell minden modern böngészőn (pl. Chrome, Firefox, Edge).
 #### Adatbázis:
-- A rendszerhez MySQL vagy SQLLite adatbázist kell használni.
+- A rendszerhez MySQL vagy SQLite adatbázist kell használni.
 #### Szerver követelmények:
 - A webshophoz PHP, Node.js vagy egyéb backend technológia szükséges.
 - Szükséges minimum egy VPS vagy dedikált szerver, amely támogatja a skálázható infrastruktúrát.
 
 
 # 7.Fogalomtár
+
+- VPS:azaz virtuális dedikált szerver vagy virtuális privát szerver egy olyan virtuális számítógép, amelyet internetes tárhelyszolgáltatás részeként értékesítenek.
+- Skálázható infrastruktúra: A skálázható infrastruktúra olyan informatikai rendszer, amely képes hatékonyan bővülni vagy zsugorodni a terhelés vagy igények változásának megfelelően, anélkül hogy jelentős teljesítményromlás vagy probléma lépne fel. 
