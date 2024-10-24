@@ -1,3 +1,51 @@
-body{
-    background-color: whitesmoke;
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a; 
+    transition: 0.3s ease;
+}
+#navbar li a.active::after,
+
+#navbar li a:hover::after{
+content: "";/*before, after pszeudoelemekkel együtt használható, és az elem tartalmának egy részét hozzáadja vagy megváltoztatja a megjelenítés során. értéke lehet szöveg kép*/
+width: 30%;
+height: 2px;
+background: black;
+position: absolute;/* lehetővé teszi az elemek pontosabb elhelyezését a weboldalon. Az egyes pozícionálási értékek használata és kombinálása segítségével rugalmas elrendezéseket és elhelyezéseket hozhatunk létre.*/
+bottom:-4px;
+left: 20px;/*tulajdonság az elem vízszintes pozícionálását szabályozza. */
+}
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  footer .logo{
+    margin-top: 2px;
+    margin-left: 5px;
+    height:50px;
+    width:50px;
+  }
+  .p_about{
+    margin-top: 210px;
+    margin-left: 20px;
+margin-right: 25px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 15pt;
+}
+.about_bd{
+    background-color: rgb(255,0,51);
+}
+
