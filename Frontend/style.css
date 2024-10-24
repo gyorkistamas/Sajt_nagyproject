@@ -58,3 +58,12 @@ font-size: 15pt;
 .home_bd{
  background-color:   rgb(51,153,255);
 }
+.kapcsolat_bd{
+    background-color: rgb(245, 245, 245) ;
+}
+.kapcsolat_div{
+    margin-right: 28px;
+    margin-left: 28px;
+    margin-top: 30px;
+    text-align: center;
+}
