@@ -48,4 +48,13 @@ font-size: 15pt;
 .about_bd{
     background-color: rgb(255,0,51);
 }
-
+.home_div{
+    margin-top: 210px;
+    margin-left: 20px;
+margin-right: 25px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 15pt;
+}
+.home_bd{
+ background-color:   rgb(51,153,255);
+}
