@@ -95,29 +95,37 @@ height: 300px;
     height: 300px;
     border-style: solid;
     border-color: black;
+   
+    height: auto; /* Automatikus magasság a helyes arányért */
 }
 .magyar-sajt{
     background-color: rgb(245, 225, 164);
 }
 .purchase-button{
     
-        background-color: rgb(244, 177, 131); 
+        background-color: rgb(85, 107, 47); 
         color: rgb(255, 255, 255);
         padding: 12px 24px; 
         font-size: 18px; 
-        border: 2px solid rgb(217, 200, 169); 
+        border: 2px solid rgb(166, 184, 164); 
         border-radius: 8px; 
         font-weight: bold; 
         cursor: pointer; 
-        transition: background-color 0.3s ease, transform 0.2s ease;              
+        transition: background-color 0.3s ease, transform 0.2s ease;  
+        margin-bottom: 26px;            
 }
 .purchase-button:hover {
-    background-color: rgb(245, 225, 164); 
+    background-color: rgb(105, 139, 69); 
     transform: scale(1.05); 
 }
 
 .purchase-button:active {
-    background-color: rgb(217, 200, 169);
+    background-color: rgb(65, 79, 35);
     transform: scale(1); 
+}
+.appenz_kep{
+    display: flex; 
+    align-items: center; 
+    gap: 16px; 
 }
 
