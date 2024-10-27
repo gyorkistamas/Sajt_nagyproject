@@ -19,13 +19,13 @@
 #navbar li a.active::after,
 
 #navbar li a:hover::after{
-content: "";/*before, after pszeudoelemekkel együtt használható, és az elem tartalmának egy részét hozzáadja vagy megváltoztatja a megjelenítés során. értéke lehet szöveg kép*/
+content: "";
 width: 30%;
 height: 2px;
 background: black;
-position: absolute;/* lehetővé teszi az elemek pontosabb elhelyezését a weboldalon. Az egyes pozícionálási értékek használata és kombinálása segítségével rugalmas elrendezéseket és elhelyezéseket hozhatunk létre.*/
+position: absolute;
 bottom:-4px;
-left: 20px;/*tulajdonság az elem vízszintes pozícionálását szabályozza. */
+left: 20px;
 }
 #feature .fe-box img{
     width: 100%;
@@ -96,3 +96,28 @@ height: 300px;
     border-style: solid;
     border-color: black;
 }
+.magyar-sajt{
+    background-color: rgb(245, 225, 164);
+}
+.purchase-button{
+    
+        background-color: rgb(244, 177, 131); 
+        color: rgb(255, 255, 255);
+        padding: 12px 24px; 
+        font-size: 18px; 
+        border: 2px solid rgb(217, 200, 169); 
+        border-radius: 8px; 
+        font-weight: bold; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, transform 0.2s ease;              
+}
+.purchase-button:hover {
+    background-color: rgb(245, 225, 164); 
+    transform: scale(1.05); 
+}
+
+.purchase-button:active {
+    background-color: rgb(217, 200, 169);
+    transform: scale(1); 
+}
+
