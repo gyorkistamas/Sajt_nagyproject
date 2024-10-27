@@ -170,3 +170,31 @@ Az online weboldal jelenlegi üzleti folyamatai nem felelnek meg teljes mérték
 |  Adminisztrációs Funkciók  | Adminisztrátorok képesek termékek hozzáadására, szerkesztésére és törlésére.          |
 
 ## 11. Fogalomszótár
+
+- Webshop: 
+    Olyan online platform, ahol termékeket vagy szolgáltatásokat lehet vásárolni.
+- Kosár: 
+    Az a virtuális hely, ahol a vásárló az általuk kiválasztott termékeket összegyűjti a vásárlás során.
+- Termék:
+    Olyan áru vagy szolgáltatás, amelyet a webshop kínál, és amelyet a vásárlók megvásárolhatnak.
+- Keresés: 
+    Az a funkció, amely lehetővé teszi a vásárlók számára, hogy kulcsszavak vagy szűrők segítségével gyorsan megtalálják a kívánt termékeket a webshopban.
+- Kategória: 
+    Az a csoportosítás, amelybe a webshopban elérhető termékek besorolásra kerülnek, segítve a vásárlókat a böngészésben 
+    (pl. Külföldi sajtok, Magyar sajtok).
+- Vásárlási folyamat:
+    Az a lépések sora, amelyet a vásárlók követnek a termék kiválasztásától a vásárlás befejezéséig.
+- Fizetési mód:
+    Az a lehetőség, amelyet a vásárlók választhatnak a vásárlás során (pl. bankkártya, PayPal, utánvét).
+- Szállítási díj: 
+    A költség, amelyet a vásárlónak a termék kiszállításáért kell fizetnie.
+- Rendelés visszaigazolás:
+    Az a nyugtázó üzenet vagy e-mail, amelyet a webshop küld a vásárlónak a rendelés sikeres lebonyolítása után.
+- Felhasználói fiók: 
+    Az a személyes profil, amelyet a vásárlók létrehozhatnak a webshopban, és amely lehetővé teszi számukra a rendeléseik nyomon követését, valamint személyre szabott ajánlatok elérését.
+- Készlet: 
+    A webshopban elérhető termékek mennyisége.
+- Adatvédelem: 
+    Az a gyakorlat, amely biztosítja, hogy a vásárlók személyes adatait biztonságban kezelik, és nem használják fel jogosulatlanul.
+- Regisztráció: 
+    A folyamat, amely során a felhasználók létrehozzák fiókjukat a webshopban, hogy vásárolhassanak vagy hozzáférhessenek speciális funkciókhoz.
