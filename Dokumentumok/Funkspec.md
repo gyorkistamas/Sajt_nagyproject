@@ -49,40 +49,70 @@ Backend: - A vágyalom kezeléséhez szükséges logika a szerveroldalon fut, am
 
 ## 4. Igényelt üzleti folyamatok modellje
 
+Az online weboldal jelenlegi üzleti folyamatai nem felelnek meg teljes mértékben a felhasználói elvárásoknak és az üzleti céloknak. Az igényelt üzleti folyamatok modellje bemutatja azokat a fejlesztési és bővítési lehetőségeket, amelyek szükségesek a felhasználói élmény javításához, az adminisztrációs hatékonyság növeléséhez, valamint az értékesítési folyamatok optimalizálásához.
+
+#### Fejlett Felhasználói Fiók Kezelés
+
+- Könnyű regisztráció és bejelentkezési lehetőségek, több belépési mód támogatása (pl. közösségi média), biztonságos adatkezelés, valamint személyre szabott felhasználói profilok.
+
+#### Vásárlási és Fizetési Folyamat
+
+- Gyors és egyszerű vásárlási folyamat, amely minimális lépéseket igényel a felhasználótól, többféle fizetési opcióval (hitelkártya, digitális pénztárcák, banki átutalás).
+
+#### Rendelésfeldolgozás és Szállítási
+
+- Automatikus rendelésfeldolgozás, amely magában foglalja a rendelés visszaigazolását, a szállítási információk frissítését és a kézbesítés nyomon követését a vásárlók számára.
+
+#### Kosárkezelés
+
+- A felhasználók könnyen hozzáadhatják és eltávolíthatják a termékeket a kosárból, módosíthatják a mennyiséget, és egyértelműen láthatják a kosár tartalmát és a vásárlás összegét.
+
+#### Keresési Funkció
+
+- A felhasználók gyorsan és könnyedén megtalálhatják a kívánt termékeket a keresősáv segítségével. A keresésnek releváns és pontos találatokat kell adnia, figyelembe véve a kulcsszavakat és szinonimákat.
+
+#### Továbbfejlesztett Termékkezelés és Készletkezelés
+
+- Könnyen használható adminisztrációs felület a termékek gyors hozzáadásához, szerkesztéséhez és eltávolításához, valamint automatizált készletfrissítések a valós idejű készletkezelés érdekében.
+
+#### Adatbázis Struktúra és Kezelés
+
+- Hatékony és skálázható adatbázis, amely biztonságosan és gyorsan kezeli a felhasználói adatokat, termékeket, rendeléseket, készletinformációkat, és más üzleti adatokat. Biztosítja a pontos nyomon követést és az adatok könnyű elérhetőség
+
 ## 5. Követelménylista
 
 | Kép | Áruház neve | Termék neve | Leírás | Ár | db |
 
-Felhasználói Fiók:
+#### Felhasználói Fiók:
 
 - Regisztrációs és bejelentkezési funkciók (e-mail, jelszó)
 - Jelszó visszaállítás lehetősége
 - Felhasználói profil kezelés (személyes adatok, rendelési előzmények)
   Termékkezelés
 
-Termékek listázása és kategorizálása:
+#### Termékek listázása és kategorizálása:
 
 - Részletes termékleírások, képek, árak
 - Termékek keresése és szűrése
 - Termékek hozzáadása a vágyalomhoz
 - Kosár és Vásárlás
 
-Kosár funkció:
+#### Kosár funkció:
 
 - Termékek hozzáadása, eltávolítás, mennyiség módosítás
 - Vásárlási folyamat (kosár áttekintése, szállítási és fizetési adatok megadása)
 - Fizetési Módok
 
-Többféle online fizetési lehetőség:
+#### Többféle online fizetési lehetőség:
 
 - bankkártya, PayPal, banki átutalás
 - Biztonságos tranzakciók garantálása
 
-Szállítási lehetőségek és költségek megjelenítése:
+#### Szállítási lehetőségek és költségek megjelenítése:
 
 - Várható érkezés
 
-E-mail értesítések:
+#### E-mail értesítések:
 
 - rendelés megerősítése, szállítási értesítések
 - Árváltozásokról és akciókról szóló értesítések
