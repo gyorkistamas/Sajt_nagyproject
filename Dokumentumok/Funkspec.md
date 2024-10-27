@@ -45,7 +45,31 @@ Adatbázis: - A vágyalom adatai (termék ID, felhasználó ID, időbélyeg) egy
 Frontend: - A vágyalom funkciót HTML, CSS és JavaScript segítségével valósítjuk meg, lehetővé téve a felhasználók számára, hogy könnyedén navigáljanak és interakcióba lépjenek a rendszerrel.
 Backend: - A vágyalom kezeléséhez szükséges logika a szerveroldalon fut, amely biztosítja a termékek hozzáadását, eltávolítását és a felhasználói értesítések kezelését.
 
-## 3. Jelenlegi üzleti folyamatok modellje
+## 3. C
+
+#### Felhasználói Fiók Kezelés
+
+- Jelenlegi állapot: Nincs megfelelő regisztrációs vagy bejelentkezési rendszer.
+
+#### Vásárlási és Fizetési Folyamat
+
+- Jelenlegi állapot: A vásárlási folyamat nem működik, mivel a kosár funkció és a fizetési rendszerek még nincsenek beállítva.
+
+#### Rendelésfeldolgozás és Szállítási Automatizáció
+
+- Jelenlegi állapot: A rendelésfeldolgozási folyamat nem létezik.
+
+#### Kosárkezelés
+
+- Jelenlegi állapot: A kosárfunkció nem működik.
+
+#### Keresési Funkció
+
+- Jelenlegi állapot: A Keresési funkció nem működik.
+
+#### Termékkezelés és Készletkezelés
+
+- Jelenlegi állapot: Nincs hatékony adminisztrációs felület a termékek kezelésére.
 
 ## 4. Igényelt üzleti folyamatok modellje
 
