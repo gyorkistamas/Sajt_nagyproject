@@ -1,22 +1,16 @@
 # 1.Áttekintés
 
-A rendszer alapvető funkciói a következők:
+### A rendszer alapvető funkciói a következők:
 
-Felhasználói regisztráció és bejelentkezés: A felhasználók saját fiókot hozhatnak létre, amelyhez egyedi azonosítóval, e-mail címmel és jelszóval férhetnek hozzá.
+- Felhasználói regisztráció és bejelentkezés: A felhasználók saját fiókot hozhatnak létre, amelyhez egyedi azonosítóval, e-mail címmel és jelszóval férhetnek hozzá.
+- Termékek böngészése és szűrése: A felhasználók kategóriák alapján kereshetnek termékeket, valamint szűrhetnek ár, elérhetőség, és egyéb paraméterek alapján.
+- Kosár és rendeléskezelés: A felhasználók termékeket helyezhetnek a kosárba, majd leadhatják rendeléseiket különböző fizetési módokkal.
 
-Termékek böngészése és szűrése: A felhasználók kategóriák alapján kereshetnek termékeket, valamint szűrhetnek ár, elérhetőség, és egyéb paraméterek alapján.
+### A rendszernek biztosítania kell a következőket:
 
-Kosár és rendeléskezelés: A felhasználók termékeket helyezhetnek a kosárba, majd leadhatják rendeléseiket különböző fizetési módokkal.
-
-
-A rendszernek biztosítania kell a következőket:
-
-Biztonság: Az adatbiztonság kiemelten fontos a felhasználói adatok, fizetési adatok, és a termékek biztonságos kezelése szempontjából. A jelszavakat biztonságos titkosítással kell tárolni.
-
-Teljesítmény: A webshopnak képesnek kell lennie nagy mennyiségű termékek gyors kezelésére, és folyamatosan biztosítani kell a gyors oldalbetöltést.
-
-Karbantarthatóság: A rendszernek modulárisnak és könnyen bővíthetőnek kell lennie, hogy az új funkciók és frissítések egyszerűen hozzáadhatók legyenek.
-
+- Biztonság: Az adatbiztonság kiemelten fontos a felhasználói adatok, fizetési adatok, és a termékek biztonságos kezelése szempontjából. A jelszavakat biztonságos titkosítással kell tárolni.
+- Teljesítmény: A webshopnak képesnek kell lennie nagy mennyiségű termékek gyors kezelésére, és folyamatosan biztosítani kell a gyors oldalbetöltést.
+- Karbantarthatóság: A rendszernek modulárisnak és könnyen bővíthetőnek kell lennie, hogy az új funkciók és frissítések egyszerűen hozzáadhatók legyenek.
 
 # 2.Jelenlegi helyzet
 
