@@ -162,7 +162,8 @@ Az online weboldal jelenlegi üzleti folyamatai nem felelnek meg teljes mérték
 ## 10. Funkció - követelmény megfeleltetése
 
 |           Funkció          |                                 Követelmény                                           |
-| Felhasználói Fiók Kezelés	 | Felhasználóknak lehetőségük van regisztrálni, bejelentkezni és jelszót visszaállítani | 
+---------------------------------------------------
+| Felhasználói Fiók Kezelés	 | Felhasználóknak lehetőségük van regisztrálni, bejelentkezni és jelszót visszaállítani |
 |           Keresés          | Keresési lehetőség kulcsszavakkal.                                                    |
 |   Termékek Megtekintése    | Termékek részletes információjának megjelenítése (kép, név, ár, leírás).              |
 |           Kosár            | A kosár tartalmának áttekinthetősége és termékek módosítása (mennyiség, eltávoltás)   |
