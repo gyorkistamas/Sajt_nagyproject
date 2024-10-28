@@ -94,35 +94,38 @@ Az online weboldal jelenlegi üzleti folyamatai nem felelnek meg teljes mérték
 
 ## 5. Követelménylista
 
-| Kép | Áruház neve | Termék neve | Leírás | Ár | db |
+| Felhasználói Fiók                                                     |
+| :-------------------------------------------------------------------- |
+| Regisztrációs és bejelentkezési funkciók (e-mail, jelszó)             |
+| Jelszó visszaállítás lehetősége                                       |
+| Felhasználói profil kezelés (személyes adatok, rendelési előzmények)  |
+| Termékkezelés                                                         |
 
-#### Felhasználói Fiók:
-- Regisztrációs és bejelentkezési funkciók (e-mail, jelszó)
-- Jelszó visszaállítás lehetősége
-- Felhasználói profil kezelés (személyes adatok, rendelési előzmények)
-  Termékkezelés
+| Termékek listázása és kategorizálása  |
+| :------------------------------------ |
+| Részletes termékleírások, képek, árak |
+| Termékek keresése és szűrése          |
+| Termékek hozzáadása a vágyalomhoz     |
+| Kosár és Vásárlás                     |
 
-#### Termékek listázása és kategorizálása:
-- Részletes termékleírások, képek, árak
-- Termékek keresése és szűrése
-- Termékek hozzáadása a vágyalomhoz
-- Kosár és Vásárlás
+| Kosár funkció                                                                   | 
+| :------------------------------------------------------------------------------ |
+| Termékek hozzáadása, eltávolítás, mennyiség módosítás                           |
+| Vásárlási folyamat (kosár áttekintése, szállítási és fizetési adatok megadása)  |
 
-#### Kosár funkció:
-- Termékek hozzáadása, eltávolítás, mennyiség módosítás
-- Vásárlási folyamat (kosár áttekintése, szállítási és fizetési adatok megadása)
-- Fizetési Módok
+| Fizetési Módok                      | 
+| :---------------------------------- |
+| bankkártya, PayPal, banki átutalás  |
+| Biztonságos tranzakciók garantálása |
 
-#### Többféle online fizetési lehetőség:
-- bankkártya, PayPal, banki átutalás
-- Biztonságos tranzakciók garantálása
+| Szállítási lehetőségek és költségek megjelenítése |
+| :------------------------------------------------ |
+| Várható érkezés                                   |
 
-#### Szállítási lehetőségek és költségek megjelenítése:
-- Várható érkezés
-
-#### E-mail értesítések:
-- rendelés megerősítése, szállítási értesítések
-- Árváltozásokról és akciókról szóló értesítések
+| E-mail értesítések                                |
+| :------------------------------------------------ |
+| rendelés megerősítése, szállítási értesítések     |
+| Árváltozásokról és akciókról szóló értesítések    |
 
 ## 6. Használati esetek
 
