@@ -68,7 +68,10 @@
           </div>
 {% else %}
           <li class="nav-item">
-            <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{{ login_url }}">Bejelentkezés</a>
+            <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Bejelentkezés</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Regisztáció</a>
           </li>
 {% endif %}
        

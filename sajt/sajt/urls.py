@@ -30,5 +30,6 @@ urlpatterns = [
     ,path('accounts/', include("allauth.urls"))
     ,path('logout/', acc_views.logout_view, name='logout')
     ,path('login/', acc_views.login_view, name='login')
+    ,path('register/', acc_views.reg_view, name='register')
     ,path('payment/', views.payment, name='payment')
 ]

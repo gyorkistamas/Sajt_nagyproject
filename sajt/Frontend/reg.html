@@ -10,7 +10,7 @@
     <div class="login-form">
       <div class="login-form-inner">                    
           </svg></div>
-        <h1>Belépés</h1>
+        <h1>Regisztráció</h1>
   
         <a href="{% provider_login_url 'google' %}?next=/" class="rounded-button google-login-button" style="width:50%">
           <span class="google-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -19,34 +19,38 @@
               <path d="M416.253 455.624l.014.014C372.396 490.901 316.666 512 256 512c-97.491 0-182.252-54.491-225.491-134.681l82.961-67.91c21.619 57.698 77.278 98.771 142.53 98.771 28.047 0 54.323-7.582 76.87-20.818l83.383 68.262z" fill="#28b446" />
               <path d="M419.404 58.936l-82.933 67.896C313.136 112.246 285.552 103.82 256 103.82c-66.729 0-123.429 42.957-143.965 102.724l-83.397-68.276h-.014C71.23 56.123 157.06 0 256 0c62.115 0 119.068 22.126 163.404 58.936z" fill="#f14336" />
             </svg></span>
-          <span>Lépj be Google Fiókkal</span>
+          <span>Regisztrálj Google Fiókkal</span>
         </a>
   
         <div class="sign-in-seperator selector">
-          <span>Vagy felhasználó névvel</span>
+          <span>Vagy email használatával</span>
         </div>
         <div style="width:50%">
         <form method="POST">
         <div class="login-form-group">
-          <label for="nickname">Felhasználó név: <span class="required-star"></span></label>
-          <input type="text" placeholder="sajtfanatikus" id="nickname">
+            <label for="nickname">Felhasználónév: <span class="required-star"></span></label>
+            <input autocomplete="on" type="text" placeholder="sajtfanatikus" id="nickname">
+          </div>
+        <div class="login-form-group">
+          <label for="email">Email: <span class="required-star"></span></label>
+          <input autocomplete="on" type="text" placeholder="sajtfanatikus@gmail.com" id="email">
         </div>
         <div class="login-form-group">
-          <label for="pwd">Jelszó: <span class="required-star"></span></label>
-          <input autocomplete="off" type="text" placeholder="Legalább 8 karakter" id="pwd">
+          <label for="pwd1">Jelszó: <span class="required-star"></span></label>
+          <input autocomplete="on" type="text" placeholder="Legalább 8 karakter" id="pwd1">
         </div>
+        <div class="login-form-group">
+            <label for="pwd2">Jelszó megint: <span class="required-star"></span></label>
+            <input autocomplete="off" type="text" placeholder="Jelszó mégegyszer" id="pwd2">
+          </div>
   
-        <div class="login-form-group single-row">          
-  
-          <a href="#" class="link forgot-link">Elfelejtetted a jelszavad?</a>
+        <div class="login-form-group single-row">
         </div>
         
         {% url 'index' as home_url %}
-        <a href="#" class="rounded-button login-cta">Belépés</a>
+        <a href="#" class="rounded-button login-cta">Regisztráció</a>
     </form>
-        <a href="{{ home_url }}" class="rounded-button login-cta exit-cta">Vissza</a>
-        </div>
-        <div class="register-div">Még nem regisztráltál? <a href="#" class="link create-account" -link>Készíts egy fiókot most !</a></div>
+        </div>        
       </div>
     </div>
       {% endblock %}

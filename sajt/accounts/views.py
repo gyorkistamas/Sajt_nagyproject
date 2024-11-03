@@ -11,3 +11,6 @@ def login_view(request):
 
 def login_cancelled(request):
     return redirect('/')
+
+def reg_view(request):
+    return render(request, 'reg.html')
