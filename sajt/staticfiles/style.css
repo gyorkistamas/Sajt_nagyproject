@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a; 
+    transition: 0.3s ease;
+}
+#navbar li a.active::after,
+
+#navbar li a:hover::after{
+content: "";
+width: 30%;
+height: 2px;
+background: black;
+position: absolute;
+bottom:-4px;
+left: 20px;
+}
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  footer .logo{
+    margin-top: 2px;
+    margin-left: 5px;
+    height:50px;
+    width:50px;
+  }
+  .p_about{
+    margin-top: 210px;
+    margin-left: 20px;
+margin-right: 25px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 15pt;
+}
+.about_bd{
+    background-color: rgb(255,0,51);
+}
+.home_div{
+    margin-top: 210px;
+    margin-left: 28px;
+margin-right: 28px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 15pt;
+}
+.home_bd{
+ background-color:   rgb(51,153,255);
+}
+.kapcsolat_bd{
+    background-color: rgb(245, 245, 245) ;
+}
+.kapcsolat_div{
+    margin-right: 28px;
+    margin-left: 28px;
+    margin-top: 55px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 13pt;
+}
+body{
+    background-color: rgb(245, 235, 220);
+}
+.szoveg-box{
+    margin-top: 36px;
+    margin-left: 28px;
+    margin-right:26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13pt;
+}
+.kf-sajt-1{
+    margin-top: 36px;
+    margin-left: 28px;
+    margin-right:26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13pt;
+}
+/*.appenz_kep{
+width: 300px;
+height: 300px;
+}*/
+.sajtkep{
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+   
+    height: auto; /* Automatikus magasság a helyes arányért */
+}
+.magyar-sajt{
+    background-color: rgb(245, 225, 164);
+}
+.purchase-button{
+    
+        background-color: rgb(85, 107, 47); 
+        color: rgb(255, 255, 255);
+        padding: 12px 24px; 
+        font-size: 18px; 
+        border: 2px solid rgb(166, 184, 164); 
+        border-radius: 8px; 
+        font-weight: bold; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease, transform 0.2s ease;  
+        margin-bottom: 26px;            
+}
+.purchase-button:hover {
+    background-color: rgb(105, 139, 69); 
+    transform: scale(1.05); 
+}
+
+.purchase-button:active {
+    background-color: rgb(65, 79, 35);
+    transform: scale(1); 
+}
+.appenz_kep{
+    display: flex; 
+    align-items: center; 
+    gap: 16px; 
+}
+
+  #lg-bag{
+    display: none;
+  }
+  
+

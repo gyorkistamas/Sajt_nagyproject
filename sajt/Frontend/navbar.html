@@ -1,0 +1,83 @@
+{% block content %}
+{% block navbar_bts%}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+{% endblock %}
+
+{% url 'index' as home_url %}
+  {% url 'items' as items_url %}
+  {% url 'products' as products_url %}
+  {% url 'cart' as cart_url %}
+  {% url 'orders' as orders_url %}
+  {% url 'about' as about_url %}
+  {% url 'contact' as contact_url %}
+  {% url 'profile' as profile_url %}
+  {% url 'login' as login_url %}
+  {% url 'logout' as logout_url %}
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">            
+        <a class="navbar-brand ml-2" href="{{ home_url }}">Sajtfanatikus Webshop</a>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav nav-tabs ml-auto">
+
+          <li class="nav-item">
+              <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{{ home_url }}">Főoldal</a>
+          </li>
+
+          <div class="nav-item dropdown btn-group">
+            <a type="button" class="nav-link btn" href="#q">Áruk</a>
+            <button type="button" class="nav-link btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only visually-hidden">Toggle</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <a class="dropdown-item" href="{{ items_url }}">Külföldi sajtok</a>
+              <a class="dropdown-item" href="{{ items_url }}">Magyar sajtok</a>
+              <a class="dropdown-item" href="{{ items_url }}">Sajt kiegészítők</a>
+            </div>
+          </div>
+{% if user.is_authenticated %}
+          <li class="nav-item">
+              <a class="nav-link {% if request.path == cart_url %}active{% endif %}" href="{{ cart_url }}">Kosár</a>
+          </li>    
+
+          <li class="nav-item">
+              <a class="nav-link {% if request.path == orders_url %}active{% endif %}" href="{{ orders_url }}">Rendeléseim</a>
+          </li>  
+{% endif %}
+          <li class="nav-item">
+              <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">Rólunk</a>
+          </li> 
+
+          <li class="nav-item">
+              <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Kapcsolat</a>
+          </li>
+
+{% if user.is_authenticated %}
+          <div class="nav-item dropdown btn-group">
+            <a type="button" class="nav-link btn" href="#q">Fiókom</a>
+            <button type="button" class="nav-link btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only visually-hidden">Toggle</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <a class="dropdown-item" href="{{ items_url }}">Profilom</a>
+              <a class="dropdown-item" href="{{ items_url }}">Megrendeléseim</a>
+              <a class="dropdown-item" href="{{ items_url }}">Kedvenc sajtjaim</a>
+              <a class="dropdown-item" href="{{ items_url }}">Kosár</a>
+              <a class="dropdown-item" href="{{ logout_url }}">Kilépés</a>
+            </div>
+          </div>
+{% else %}
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="{{ login_url }}">Bejelentkezés</a>
+          </li>
+{% endif %}
+       
+        </ul>
+      </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    {% endblock %}

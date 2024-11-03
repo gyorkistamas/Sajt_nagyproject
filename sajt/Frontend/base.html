@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>{% block title %}Sajtfanatikus Webshop{% endblock %}</title>    
+    
+    {% block navbar_bts %}
+    {% endblock %}
+    {% block login_css %}
+    {% endblock %}
+    {% block payment_css %}
+    {% endblock %}
+    {% block payment_js %}
+    {% endblock %}
+    <title>Sajtok</title>
+</head>
+<body>
+    <header style="position: static;">
+    {% include "navbar.html" %}
+    </header>
+    <div class="content-x">
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
