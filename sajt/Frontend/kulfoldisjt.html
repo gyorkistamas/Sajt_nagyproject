@@ -10,29 +10,36 @@
 <body class="kulfoldi-sajt">
     <div>
         <ul id="navbar">
-            <li><a>Regisztráció</a></li>
-            <li><a href="login.html">Bejelentkezés</a></li>
             <li><a  href="home.html">Home</a></li>
-            <li><a class="active"  href="index.html">Áruk</a></li>
+            <div class="dropdown">
+                <li><a class="active"  href="index.html">Áruk</a></li>
+                <div class="dropdown-options">
+                    <a  href="kulfoldisjt.html">Külföldi sajtok</a>
+                    <a  href="magyarsjt.html">Magyar sajtok</a>
+                </div>
+              </div>
             <li><a href="about.html">Rólunk</a></li>
             <li><a href="kapcsolat.html">Kapcsolat</a></li>
+            <li><a href="regiszt.html">Regisztráció</a></li>
+            <li><a href="login.html">Bejelentkezés</a></li>
             <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            
         </ul>
     </div>
-    <div>
-        <ul id="navbar">
-            <li><a  class="active" href="kulfoldisjt.html">Külföldi sajtok</a></li>
-            <li><a  href="magyarsjt.html">Magyar sajtok</a></li>
-            
-        </ul>
-    </div>
+    <div class="search-container">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+   
+
     <div class="kf-sajt-1">
         <h4>Appenzeller</h4>
-        <p>Az Appenzeller egy svájci félkemény sajt. A Säntis nevű hegy körüli vidék szolgáltatja a természetes nyers tejet, amelyből az Appenzeller sajt készül.</p>
-        <p>Nevét a kelet-svájci Appenzell kantonról kapta. Több, mint 700 éve ismerik ezt a sajtfélét. </p>
+        
         <div class="appenz_kep">
             <img src="kepek/Appenzeller.jpg" class="sajtkep" >
+        <div class="text">
+            <p>Az Appenzeller egy svájci félkemény sajt. A Säntis nevű hegy körüli vidék szolgáltatja a természetes nyers tejet, amelyből az Appenzeller sajt készül.</p>
+            <p>Nevét a kelet-svájci Appenzell kantonról kapta. Több, mint 700 éve ismerik ezt a sajtfélét. </p>
+        </div>
             <button class="purchase-button">Megveszem</button>
             
         </div>
@@ -41,63 +48,69 @@
     
     <div class="kf-sajt-1">
       <h4>Brie</h4>
-      <p>A brie (ejtsd: brí) francia fehérpenészes lágysajt, a Párizshoz közeli Brie tájegységről kapta nevét. Tehéntejből készül, eredetileg is több változatban.</p>
       <div class="appenz_kep">
        <img src="kepek/brie.jpg" class="sajtkep">
+        <p>A brie (ejtsd: brí) francia fehérpenészes lágysajt, a Párizshoz közeli Brie tájegységről kapta nevét. Tehéntejből készül, eredetileg is több változatban.</p>
         <button class="purchase-button">Megveszem</button>
     </div>
     </div>
 
     <div class="kf-sajt-1">
         <h4>Camambert</h4>
-        <p>A camembert az azonos nevű normandiai faluról elnevezett világhírű francia lágy sajt. 
-            Zsírtartalma 45-50%-os. Eredetileg nyers tehéntejből készül, és fadobozban hozzák forgalomba, de sokfelé utánozzák ipari méretekben, pasztőrözött tejből. </p>
+        
             <div class="appenz_kep">
               <img src="kepek/camambert.jpg" class="sajtkep">
+              <p>A camembert az azonos nevű normandiai faluról elnevezett világhírű francia lágy sajt. 
+                Zsírtartalma 45-50%-os. Eredetileg nyers tehéntejből készül, és fadobozban hozzák forgalomba, de sokfelé utánozzák ipari méretekben, pasztőrözött tejből. </p>
                 <button class="purchase-button">Megveszem</button>
             </div>
     </div>
     <div class="kf-sajt-1">
         <h4>Cheddar</h4>
-        <p>A cheddar Anglia egyik legkedveltebb sajtja. Tehéntejből készült kemény sajt, színe szalmasárga, illetve színezve narancsvörös. Állaga enyhén törékeny. Íze erőteljesen aromás, kissé fanyar, a dióra emlékeztet. </p>
+        
         <div class="appenz_kep">
             <img src="kepek/Sarga-cheddar-sajt2.jpeg" class="sajtkep">
+            <p>A cheddar Anglia egyik legkedveltebb sajtja. Tehéntejből készült kemény sajt, színe szalmasárga, illetve színezve narancsvörös. Állaga enyhén törékeny. Íze erőteljesen aromás, kissé fanyar, a dióra emlékeztet. </p>
             <button class="purchase-button">Megveszem</button>
         </div>
     </div>
     <div class="kf-sajt-1">
         <h4>Parenyica</h4>
-        <p>A parenyica (szlovákul: parenica) hagyományos szlovák nem érlelt sajt. Félkemény, félzsíros, párolt és általában füstölt sajt, de készítenek nem füstölt változatot is. Krémszíne van, a gőzölés miatt. 
-            A sajtot szalagokban gyártják, amit csigaszerű spirálokba tekercselnek fel. A juhtej részaránya a készítés során minimum 50% kell legyen. </p>
+        
             <div class="appenz_kep">
                <img src="kepek/parenyica.jpg" class="sajtkep">
+               <p>A parenyica (szlovákul: parenica) hagyományos szlovák nem érlelt sajt. Félkemény, félzsíros, párolt és általában füstölt sajt, de készítenek nem füstölt változatot is. Krémszíne van, a gőzölés miatt. 
+                A sajtot szalagokban gyártják, amit csigaszerű spirálokba tekercselnek fel. A juhtej részaránya a készítés során minimum 50% kell legyen. </p>
                 <button class="purchase-button">Megveszem</button>
             </div>
     </div>
     <div class="kf-sajt-1">
         <h4>Mozzarella</h4>
-        <p>A mozzarella porcelánfehér színű, szálas szerkezetű gyúrt sajt. A dél-olaszországi Campania és Lazio tartományból származik, ahol a 16. század óta változatlan recept alapján készítik, a háziasított vízibivaly zsíros tejéből. 
-            Gyártása során nem érlelik, semmilyen tartósítószert nem adnak hozzá, és nem is ízesítik. A készítés során a sajt zsírdús alapanyagát addig nyújtják és gyúrják, amíg végül formázhatóvá nem válik. A méret kialakítását a hagyományos, kerámiából vagy porcelánból készült sajtkészítőedényben végzik.
-             Hagyományosan friss állapotban árulják, a nagykereskedelmi forgalomban pedig többnyire sós lében tárolva értékesítik. </p>
+       
              <div class="appenz_kep">
                <img src="kepek/Mozzarella.jpg" class="sajtkep">
+               <p>A mozzarella porcelánfehér színű, szálas szerkezetű gyúrt sajt. A dél-olaszországi Campania és Lazio tartományból származik, ahol a 16. század óta változatlan recept alapján készítik, a háziasított vízibivaly zsíros tejéből. 
+                Gyártása során nem érlelik, semmilyen tartósítószert nem adnak hozzá, és nem is ízesítik. A készítés során a sajt zsírdús alapanyagát addig nyújtják és gyúrják, amíg végül formázhatóvá nem válik. A méret kialakítását a hagyományos, kerámiából vagy porcelánból készült sajtkészítőedényben végzik.
+                 Hagyományosan friss állapotban árulják, a nagykereskedelmi forgalomban pedig többnyire sós lében tárolva értékesítik. </p>
                 <button class="purchase-button">Megveszem</button>
             </div>
     </div>
     <div class="kf-sajt-1">
         <h4>Trappista sajt</h4>
-    <p>A trappista sajt francia eredetű félkemény sajt. A legnépszerűbb sajt Magyarországon, az ország sajtforgalmának 70 százalékát adja.</p>
+    
     <div class="appenz_kep">
         <img src="kepek/trappista.jpg" class="sajtkep">
+        <p>A trappista sajt francia eredetű félkemény sajt. A legnépszerűbb sajt Magyarországon, az ország sajtforgalmának 70 százalékát adja.</p>
         <button class="purchase-button">Megveszem</button>
     </div>
     </div>
     <div class="kf-sajt-1">
         <h4>Mascarpone</h4>
-    <p>A mascarpone szarvasmarha eredetű tejszínből préselés nélkül készült, túró állagú, sótlan, nyers olasz friss sajt. Fehér színű, krémes, héjatlan. Általában nem önmagában, saját ízéért fogyasztják, hanem más, édes vagy sós, átütő ízű adalékokat hozzákeverve: desszertek alapanyaga – világszerte ismertté a tiramisu tette –, vagy kék nemespenészes lágysajttal szendvicseken feltét. Zsírtartalma a szárazanyag 50-55%-a. 
-        Puha állaga miatt csak olyan műanyag pohárban hozható kereskedelmi forgalomba, mint a tejföl vagy a vajkrémek. Lombardiából származik, házilag télen fejt tejből készítették.</p>
+    
         <div class="appenz_kep">
           <img src="kepek/mascarpone.jpg" class="sajtkep">
+          <p>A mascarpone szarvasmarha eredetű tejszínből préselés nélkül készült, túró állagú, sótlan, nyers olasz friss sajt. Fehér színű, krémes, héjatlan. Általában nem önmagában, saját ízéért fogyasztják, hanem más, édes vagy sós, átütő ízű adalékokat hozzákeverve: desszertek alapanyaga – világszerte ismertté a tiramisu tette –, vagy kék nemespenészes lágysajttal szendvicseken feltét. Zsírtartalma a szárazanyag 50-55%-a. 
+             Puha állaga miatt csak olyan műanyag pohárban hozható kereskedelmi forgalomba, mint a tejföl vagy a vajkrémek. Lombardiából származik, házilag télen fejt tejből készítették.</p>
             <button class="purchase-button">Megveszem</button>
         </div>
     </div>

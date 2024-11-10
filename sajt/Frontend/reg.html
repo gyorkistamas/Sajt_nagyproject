@@ -2,14 +2,21 @@
 {% load static %}
 {% load socialaccount %}
 {% block login_css %}
-<link rel="stylesheet" type="text/css" href={% static 'login_style.css' %}>
+<link rel="stylesheet" type="text/css" href="{% static 'login_style.css' %}">
 {% endblock %}
 {% block content %}
 <div class="login-x bg-light">
 <div class="login-container">
     <div class="login-form">
       <div class="login-form-inner">                    
-          </svg></div>
+          </div>
+          {% if error %}
+    <div class="alert alert-danger text-center" style="width:50%;" >
+      {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
         <h1>Regisztráció</h1>
   
         <a href="{% provider_login_url 'google' %}?next=/" class="rounded-button google-login-button" style="width:50%">
@@ -26,29 +33,30 @@
           <span>Vagy email használatával</span>
         </div>
         <div style="width:50%">
-        <form method="POST">
+        <form method="POST" action="{% url 'register' %}">
+          {% csrf_token %}
         <div class="login-form-group">
             <label for="nickname">Felhasználónév: <span class="required-star"></span></label>
-            <input autocomplete="on" type="text" placeholder="sajtfanatikus" id="nickname">
+            <input autocomplete="on" type="text" placeholder="sajtfanatikus" name="username" id="nickname">
           </div>
         <div class="login-form-group">
           <label for="email">Email: <span class="required-star"></span></label>
-          <input autocomplete="on" type="text" placeholder="sajtfanatikus@gmail.com" id="email">
+          <input autocomplete="on" type="text" placeholder="sajtfanatikus@gmail.com" name="email" id="email">
         </div>
         <div class="login-form-group">
           <label for="pwd1">Jelszó: <span class="required-star"></span></label>
-          <input autocomplete="on" type="text" placeholder="Legalább 8 karakter" id="pwd1">
+          <input autocomplete="on" type="text" placeholder="Legalább 8 karakter" name="pwd" id="pwd1">
         </div>
         <div class="login-form-group">
             <label for="pwd2">Jelszó megint: <span class="required-star"></span></label>
-            <input autocomplete="off" type="text" placeholder="Jelszó mégegyszer" id="pwd2">
+            <input autocomplete="off" type="text" placeholder="Jelszó mégegyszer" name="pwd-confirm" id="pwd2">
           </div>
   
         <div class="login-form-group single-row">
         </div>
         
         {% url 'index' as home_url %}
-        <a href="#" class="rounded-button login-cta">Regisztráció</a>
+        <a onclick="this.closest('form').submit();return false;" href="#" class="rounded-button login-cta">Regisztráció</a>
     </form>
         </div>        
       </div>

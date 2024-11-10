@@ -2,6 +2,9 @@ from email.policy import default
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.forms import CharField
+from datetime import timedelta
+from django.utils import timezone
+import uuid
 
 # Create your models here.
 class CustomUser(AbstractUser):
@@ -10,7 +13,6 @@ class CustomUser(AbstractUser):
     dark_mode = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
-    is_google = models.BooleanField(default=False)
     mfa = models.BooleanField(default=False)
     mfa_secret = models.CharField(max_length=32, null=True, blank=True)
     last_login_ip = models.GenericIPAddressField(null=True, blank=True)
@@ -24,6 +26,14 @@ class CustomUser(AbstractUser):
     
     def __str__(self):
         return self.username
+    
+class PasswordResetToken(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    token = models.UUIDField(default=uuid.uuid4, unique=True)    
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    def is_valid(self):
+        return self.created_at >= timezone.now() > timedelta(hours=1)
     
 # class FavouriteItems(models.Model):
 #     accountId = models.ForeignKey(CustomUser, on_delete=models.CASCADE)

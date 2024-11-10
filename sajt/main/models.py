@@ -15,14 +15,14 @@ class Category(models.Model):
     name = models.CharField(choices=[("magyar", "magyar")], max_length=100)
     
     
-# class Cart(models.Model):
-#     user = models.ForeignKey('CustomUser', on_delete=models.CASCADE)
-#     price = models.IntegerField()
-#     
-# class CartItems(models.Model):
-#     cartId = models.ForeignKey('Cart', on_delete=models.CASCADE)
-#     itemId = models.ForeignKey('Item', on_delete=models.CASCADE)
-#     quantity = models.IntegerField()
+class CartModel(models.Model):
+    user = models.ForeignKey('accounts.CustomUser', on_delete=models.CASCADE)
+    price = models.IntegerField()
+    
+class CartItems(models.Model):
+    cartId = models.ForeignKey('CartModel', on_delete=models.CASCADE)
+    itemId = models.ForeignKey('Item', on_delete=models.CASCADE)
+    quantity = models.IntegerField()
 #     
 # 
 # class Payment(models.Model):

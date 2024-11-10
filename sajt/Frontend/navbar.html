@@ -14,6 +14,7 @@
   {% url 'profile' as profile_url %}
   {% url 'login' as login_url %}
   {% url 'logout' as logout_url %}
+  {% url 'register' as reg_url %}
       <nav class="navbar navbar-expand-lg navbar-light bg-light">            
         <a class="navbar-brand ml-2" href="{{ home_url }}">Sajtfanatikus Webshop</a>
     
@@ -71,7 +72,7 @@
             <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Bejelentkezés</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Regisztáció</a>
+            <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ reg_url }}">Regisztáció</a>
           </li>
 {% endif %}
        

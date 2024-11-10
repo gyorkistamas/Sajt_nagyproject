@@ -31,5 +31,8 @@ urlpatterns = [
     ,path('logout/', acc_views.logout_view, name='logout')
     ,path('login/', acc_views.login_view, name='login')
     ,path('register/', acc_views.reg_view, name='register')
+    ,path('lost+password/', acc_views.lost_pwd_view, name='lost_pwd')
+    ,path('reset-password/', acc_views.reset_pwd_view, name='reset_pwd')
     ,path('payment/', views.payment, name='payment')
+    ,path('items/', views.items, name='items')
 ]

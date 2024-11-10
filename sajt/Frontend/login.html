@@ -2,14 +2,21 @@
 {% load static %}
 {% load socialaccount %}
 {% block login_css %}
-<link rel="stylesheet" type="text/css" href={% static 'login_style.css' %}>
+<link rel="stylesheet" type="text/css" href="{% static 'login_style.css' %}">
 {% endblock %}
 {% block content %}
 <div class="login-x bg-light">
-<div class="login-container">
+<div class="login-container">  
     <div class="login-form">
       <div class="login-form-inner">                    
-          </svg></div>
+      </div>
+      {% if error is True %}
+    <div class="alert alert-danger text-center" style="width:50%;" >
+      {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
         <h1>Belépés</h1>
   
         <a href="{% provider_login_url 'google' %}?next=/" class="rounded-button google-login-button" style="width:50%">
@@ -26,23 +33,25 @@
           <span>Vagy felhasználó névvel</span>
         </div>
         <div style="width:50%">
-        <form method="POST">
+        <form method="POST" action="{% url 'login' %}">
+          {% csrf_token %}
         <div class="login-form-group">
           <label for="nickname">Felhasználó név: <span class="required-star"></span></label>
-          <input type="text" placeholder="sajtfanatikus" id="nickname">
+          <input type="text" placeholder="sajtfanatikus" name="username" id="nickname">
         </div>
         <div class="login-form-group">
           <label for="pwd">Jelszó: <span class="required-star"></span></label>
-          <input autocomplete="off" type="text" placeholder="Legalább 8 karakter" id="pwd">
-        </div>
-  
-        <div class="login-form-group single-row">          
-  
-          <a href="#" class="link forgot-link">Elfelejtetted a jelszavad?</a>
+          <input autocomplete="off" type="text" placeholder="Legalább 8 karakter" name="pwd" id="pwd">
         </div>
         
         {% url 'index' as home_url %}
-        <a href="#" class="rounded-button login-cta">Belépés</a>
+        {% url 'lost_pwd' as lost_pwd_url%}
+  
+        <div class="login-form-group single-row">          
+  
+          <a href="{{ lost_pwd_url }}" class="link forgot-link">Elfelejtetted a jelszavad?</a>
+        </div>
+        <a onclick="this.closest('form').submit();return false;" href="#" class="rounded-button login-cta">Belépés</a>
     </form>
         <a href="{{ home_url }}" class="rounded-button login-cta exit-cta">Vissza</a>
         </div>

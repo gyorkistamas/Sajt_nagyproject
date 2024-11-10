@@ -26,3 +26,22 @@ def contact(request):
 
 def payment(request):
     return render(request, 'payment.html')
+
+def items(request):
+    Items:dict = {
+        0: {
+            "Name":"Termék neve",           
+            "Description":"Rövid termék leírás",
+            "Price":"11111",
+            "Stock":"11"            
+        },       
+    }
+    for i in range(1,30):
+        Items[i] = {
+            "ImagePath":"",
+            "Name":f"Termék neve {i}",           
+            "Description":"Rövid termék leírás",
+            "Price":f"{i*2}",
+            "Stock":f"{i}"  
+        }
+    return render(request, "items.html", {"Items":Items})

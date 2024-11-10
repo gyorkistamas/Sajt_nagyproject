@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block items_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'items_style.css' %}">
+{% endblock %}
+{% block content %}
+<div class="items-container">
+    {% for key,item in Items.items %}
+        <div class="item-card">
+            <img src="https://via.placeholder.com/150" alt="Item Image" class="item-image">
+            <h2 class="item-title">{{ item.Name }}</h2>
+            <p class="item-description">{{ item.Description }}</p>
+            <p class="item-price">{{ item.Price }} Ft</p>
+            <div class="quantity-selector">
+                <label for="quantity">Darabszám:</label>
+                <input type="number" id="quantity-{{ key }}" name="quantity" min="1" max="{{ item.Stock }}" value="1"> db
+            </div>
+            <input type="hidden" name="item_id" value="{{ key }}">
+            <button class="purchase-button">Megveszem</button>
+        </div>
+{% endfor %}
+</div>
+{% endblock %}
