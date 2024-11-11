@@ -13,10 +13,10 @@ A jelenlegi webshop rendszer egy alapvető online termékértékesítési platfo
 - Jelenlegi helyzet: A kosár funkció jelenleg inaktív. A felhasználók nem tudják megtekinteni vagy kezelni a hozzáadott termékeiket, így nem módosíthatják a mennyiséget, és nem indíthatják el a vásárlási folyamatot.
 
 #### Adatbázis
-- Jelenlegi helyzet: Bár a termékek és felhasználói adatok adatbázis struktúrája kialakításra került, a vágyalom funkcióhoz szükséges adatokat kezelő tábla nem működik megfelelően, ami akadályozza a gyors keresést és az adatok kezelését.
+- Jelenlegi helyzet: Bár a termékek és felhasználói adatok adatbázis struktúrája kialakításra került, a funkcióhoz szükséges adatokat kezelő tábla nem működik megfelelően, ami akadályozza a gyors keresést és az adatok kezelését.
 
 #### Frontend
-- Jelenlegi helyzet: A vágyalom funkció, valamint a felhasználói fiókok kezeléséhez szükséges frontend elemek nem reagálnak megfelelően. Hiányoznak az alapvető interaktív elemek, és a felhasználók nem tudják elérni a kívánt funkciókat.
+- Jelenlegi helyzet: A funkciók, valamint a felhasználói fiókok kezeléséhez szükséges frontend elemek nem reagálnak megfelelően. Hiányoznak az alapvető interaktív elemek, és a felhasználók nem tudják elérni a kívánt funkciókat.
 
 #### Backend
 - Jelenlegi helyzet: A szerveroldali logika jelenleg nem képes kezelni a termékek hozzáadását, eltávolítását vagy a felhasználói értesítéseket.
@@ -41,11 +41,11 @@ Kosár:
 
 ### Technikai Megvalósítás
 Adatbázis: 
-- A vágyalom adatai (termék ID, felhasználó ID, időbélyeg) egy külön táblában tárolódnak az adatbázisban, biztosítva a gyors keresést és az egyszerű kezelést.
+- Az adatai (termék ID, felhasználó ID, időbélyeg) egy külön táblában tárolódnak az adatbázisban, biztosítva a gyors keresést és az egyszerű kezelést.
 Frontend: 
-- A vágyalom funkciót HTML, CSS és JavaScript segítségével valósítjuk meg, lehetővé téve a felhasználók számára, hogy könnyedén navigáljanak és interakcióba lépjenek a rendszerrel.
+- A funkciókat HTML, CSS és JavaScript segítségével valósítjuk meg, lehetővé téve a felhasználók számára, hogy könnyedén navigáljanak és interakcióba lépjenek a rendszerrel.
 Backend: 
-- A vágyalom kezeléséhez szükséges logika a szerveroldalon fut, amely biztosítja a termékek hozzáadását, eltávolítását és a felhasználói értesítések kezelését.
+- A kezeléséhez szükséges logika a szerveroldalon fut, amely biztosítja a termékek hozzáadását, eltávolítását és a felhasználói értesítések kezelését.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
 
@@ -105,7 +105,7 @@ Az online weboldal jelenlegi üzleti folyamatai nem felelnek meg teljes mérték
 | :------------------------------------ |
 | Részletes termékleírások, képek, árak |
 | Termékek keresése és szűrése          |
-| Termékek hozzáadása a vágyalomhoz     |
+| Termékek hozzáadása a kosárhoz        |
 | Kosár és Vásárlás                     |
 
 | Kosár funkció                                                                   | 
