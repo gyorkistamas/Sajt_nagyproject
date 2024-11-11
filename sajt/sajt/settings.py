@@ -174,7 +174,7 @@ EMAIL_PORT = '587'
 
 
 CONTACTS = {
-    "CONTACT_PHONE": '36 1 666 6969'
+    "CONTACT_PHONE": '36 3 666 6969'
     ,"CONTACT_EMAIL_SUPPORT": 'infoSajtosok@gmail.hu'
     ,"CONTACT_ADDRESS": 'Sajtkedvelő utca 1'
     ,"CONTACT_CITY": '1234 Budapest'
