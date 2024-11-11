@@ -34,21 +34,24 @@ ALLOWED_HOSTS = []
 
 # Application definition
 SITE_ID = 2
+CART_SESSION_ID = 'cart'
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.admin'
+    ,'django.contrib.auth'
+    ,'django.contrib.contenttypes'
+    ,'django.contrib.sessions'
+    ,'django.contrib.messages'
+    ,'django.contrib.staticfiles'
     # own app
-    'main',
-    'accounts',
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
+    ,'main'    
+    ,'accounts'
+    ,'cart.apps.CartConfig'
+    ,'django.contrib.sites'
+    ,'allauth'
+    ,'allauth.account'
+    ,'allauth.socialaccount'
+    ,'allauth.socialaccount.providers.google'
+    ,
 ]
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -66,14 +69,15 @@ SOCIALACCOUNT_LOGOUT_ON_GET=True
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
+    'django.middleware.security.SecurityMiddleware'
+    ,'django.contrib.sessions.middleware.SessionMiddleware'
+    ,'django.middleware.common.CommonMiddleware'
+    ,'django.middleware.csrf.CsrfViewMiddleware'
+    ,'django.contrib.auth.middleware.AuthenticationMiddleware'
+    ,'django.contrib.messages.middleware.MessageMiddleware'
+    ,'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    ,'allauth.account.middleware.AccountMiddleware'
+    ,
 ]
 
 ROOT_URLCONF = 'sajt.urls'
@@ -167,3 +171,20 @@ EMAIL_HOST = 'live.smtp.mailtrap.io'
 EMAIL_HOST_USER = 'api'
 EMAIL_HOST_PASSWORD = '9214d61f4dcafa6acaab3b65dcdebd00'
 EMAIL_PORT = '587'
+
+
+CONTACTS = {
+    "CONTACT_PHONE": '36 1 666 6969'
+    ,"CONTACT_EMAIL_SUPPORT": 'infoSajtosok@gmail.hu'
+    ,"CONTACT_ADDRESS": 'Sajtkedvelő utca 1'
+    ,"CONTACT_CITY": '1234 Budapest'
+    ,"CONTACT_COUNTRY": 'Sajt Country'
+    ,"SALES_MANAGER_NAME": 'Sales Manager'
+    ,"SALES_MANAGER_PHONE": '+36 30 12-345-6789'
+    ,"SALES_MANAGER_EMAIL": 'sajtfanatikus.sales@example.hu'
+    ,"FACEBOOK":"https://facebook.com/endpoint123"
+    ,"INSTAGRAM":"https://instagram.com/endpoint123"
+    ,"TWITTER":"https://twitter.com/endpoint123"
+}
+
+

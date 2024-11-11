@@ -1,17 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 #navbar{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    justify-content:space-evenly;
+   
 }
 #navbar li{
     list-style: none;
@@ -89,6 +81,8 @@ body{
     font-size: 13pt;
 }
 .kf-sajt-1{
+    width: 1000px;
+    justify-self: center;
     margin-top: 36px;
     margin-left: 28px;
     margin-right:26px;
@@ -100,12 +94,12 @@ width: 300px;
 height: 300px;
 }*/
 .sajtkep{
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     border-style: solid;
     border-color: black;
-   
-    height: auto; /* Automatikus magasság a helyes arányért */
+    
+    /*height: auto; */
 }
 .magyar-sajt{
     background-color: rgb(245, 225, 164);
@@ -141,5 +135,124 @@ height: 300px;
   #lg-bag{
     display: none;
   }
+  .body-login{
+    background-color: rgb(255, 243, 230);
+  }
+  .login-box{
+    margin-top: 55px;
+    text-align: center;
+    font-size: 14pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+   
+    align-items: center; 
+   
+  }
+  .login-input{
+    border-radius: 20px;
+    padding: 5px; 
+    width: 300px;
+    height: 20px;  
+    display: block; 
+    margin: 10px auto; 
+  }
+  .login-button{
+    margin-top: 10px;
+    background-color: #f4a261; 
+  color: #fff; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  }
+  button:hover {
+    background-color: #e76f51; 
+  }
   
+  button:active {
+    background-color: #d9534f; 
+    transform: scale(0.98); 
+  }
+  .regiszt-button{
+    margin-top: 10px;
+    background-color: #0077b6; 
+  color: #fff; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 12px 24px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  }
+  button:hover {
+    background-color: #005f8d; /* Sötétebb árnyalat hover-re */
+  }
+  
+  button:active {
+    background-color: #004a70; /* Még sötétebb árnyalat kattintáskor */
+    transform: scale(0.98); /* Enyhe méretcsökkentés kattintáskor */
+  }
+  .body-regiszt{
+    background-color: rgb(240, 248, 255);
+  }
 
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .dropdown-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    transform: translateX(-10%);
+    background-color:#fff;
+    border-radius:5px;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  
+  .dropdown:hover .dropdown-options {
+    display: block;
+  }
+  
+  .dropdown-options a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    padding:5px 20px;
+  }
+  
+  .dropdown-options a:hover {
+    color: #0a0a23;
+    background-color: #ddd;
+    border-radius:5px;
+  }
+
+  /*.text{
+    width: 800px;
+  }*/
+
+  .search-container button {
+    float: center;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 250px;
+    background: #ddd;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+  }
+  .search-container {
+    float: right;
+  }

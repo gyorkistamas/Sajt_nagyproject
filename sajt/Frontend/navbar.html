@@ -7,7 +7,7 @@
 {% url 'index' as home_url %}
   {% url 'items' as items_url %}
   {% url 'products' as products_url %}
-  {% url 'cart' as cart_url %}
+  {% url 'cart_detail' as cart_url %}
   {% url 'orders' as orders_url %}
   {% url 'about' as about_url %}
   {% url 'contact' as contact_url %}
@@ -15,6 +15,7 @@
   {% url 'login' as login_url %}
   {% url 'logout' as logout_url %}
   {% url 'register' as reg_url %}
+  {% url 'items' as items_url %}
       <nav class="navbar navbar-expand-lg navbar-light bg-light">            
         <a class="navbar-brand ml-2" href="{{ home_url }}">Sajtfanatikus Webshop</a>
     
@@ -26,7 +27,7 @@
           </li>
 
           <div class="nav-item dropdown btn-group">
-            <a type="button" class="nav-link btn" href="#q">Áruk</a>
+            <a type="button" class="nav-link btn {% if request.path == items_url %}active{% endif %}" href="{{ items_url }}">Áruk</a>
             <button type="button" class="nav-link btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="sr-only visually-hidden">Toggle</span>
             </button>

@@ -28,6 +28,8 @@ urlpatterns = [
     ,path('', views.index, name='index')
     ,path('accounts/3rdparty/login/cancelled/', acc_views.login_cancelled)
     ,path('accounts/', include("allauth.urls"))
+    ,path('about/', views.about, name='about')
+    ,path('contact/', views.contact, name='contact')
     ,path('logout/', acc_views.logout_view, name='logout')
     ,path('login/', acc_views.login_view, name='login')
     ,path('register/', acc_views.reg_view, name='register')
@@ -35,4 +37,7 @@ urlpatterns = [
     ,path('reset-password/', acc_views.reset_pwd_view, name='reset_pwd')
     ,path('payment/', views.payment, name='payment')
     ,path('items/', views.items, name='items')
+    ,path('add_to_cart/', views.add_to_cart, name="add_to_cart")
+    ,path('cart/', views.cart_detail, name='cart_detail')
+    ,path('cart/remove/<int:product_id>/', views.cart_remove, name='cart_remove')
 ]

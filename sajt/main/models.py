@@ -2,14 +2,7 @@ from pyexpat import model
 from django.db import models
 # Create your models here.
 
-class Item(models.Model):
-    name = models.CharField(max_length=100)
-    price = models.FloatField()
-    image = models.ImageField(upload_to='images')
-    quantity = models.IntegerField()
-    categoryId = models.ForeignKey('Category', on_delete=models.CASCADE)
-    def __str__(self):
-        return self.name
+
     
 class Category(models.Model):
     name = models.CharField(choices=[("magyar", "magyar")], max_length=100)
@@ -21,7 +14,7 @@ class CartModel(models.Model):
     
 class CartItems(models.Model):
     cartId = models.ForeignKey('CartModel', on_delete=models.CASCADE)
-    itemId = models.ForeignKey('Item', on_delete=models.CASCADE)
+    itemId = models.ForeignKey('cart.Product', on_delete=models.CASCADE)
     quantity = models.IntegerField()
 #     
 # 

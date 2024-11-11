@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="kapcsolat_div">
+    Örömmel állunk rendelkezésére minden kérdésével és észrevételével kapcsolatban! 
+    <p> Amennyiben segítségre van szüksége, kérdése van termékeinkkel, rendelésével, vagy bármilyen egyéb ügyben, bátran lépjen kapcsolatba velünk.</p>
+
+Elérhetőségeink:
+
+<p>Email: {{ contact_data.CONTACT_EMAIL_SUPPORT }}</p>
+<p>Kérjük, küldje el nekünk kérdéseit, és mi a lehető leghamarabb válaszolunk!</p>
+  
+
+<p>Telefon: {{ contact_data.CONTACT_PHONE }}</p>
+Ügyfélszolgálatunk hétfőtől péntekig 9:00 és 17:00 között elérhető.
+
+<p>Cím: {{ contact_data.CONTACT_CITY }}, {{ contact_data.CONTACT_ADDRESS }}.</p>
+<p>Látogasson el üzletünkbe, ahol személyesen is megvásárolhatja termékeinket.</p>
+
+<p>Közösségi média:</p>
+<p>Kövessen minket a legfrissebb hírekért, akciókért és új termékekért!</p>
+
+ <p>Facebook/Sajtosok/Twitter</p>
+ <p><a href="{{ contact_data.FACEBOOK }}">Facebook</a>/<a href="{{ contact_data.INSTAGRAM }}">Instagram</a>/<a href="{{ contact_data.TWITTER }}">Twitter</a></p>
+
+</div>
+{% endblock %}
