@@ -1,0 +1,50 @@
+.payment-container{
+  /*  border-style: solid;
+    
+  /*  border-color: red;*/
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 50px;
+
+}
+.payment-box{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 50px;
+    margin-top: 100px;
+
+}
+.purchase-button{
+    
+    background-color: rgb(85, 107, 47); 
+    color: rgb(255, 255, 255);
+    padding: 12px 24px; 
+    font-size: 18px; 
+    border: 2px solid rgb(166, 184, 164); 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;  
+    margin-bottom: 26px;            
+}
+.purchase-button:hover {
+background-color: rgb(105, 139, 69); 
+transform: scale(1.05); 
+}
+
+.purchase-button:active {
+background-color: rgb(65, 79, 35);
+transform: scale(1); 
+}
+.button-cls{
+    margin-top: 160px;
+}
+.number{
+    width: 50px;
+}
+ 
