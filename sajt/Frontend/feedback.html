@@ -11,7 +11,25 @@
                     <form>
                         <div class="mb-3">
                                 <label for="username" class="form-label">Név</label>
-                                <input type="text" class="form-control" id="username" placeholder="Írd be a neved">
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star1">
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star2">
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star3">
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star4">
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star5">
+                                <script>
+                                        const stars = document.querySelectorAll('.star');
+                                        stars.forEach((star, index) => {
+                                                star.addEventListener('click', () => {
+                                                        stars.forEach((s, i) => {
+                                                                if (i <= index) {
+                                                                        s.src = 'kepek/feedback/filled-star.png';
+                                                                } else {
+                                                                        s.src = 'kepek/feedback/empty-star.png';
+                                                                }
+                                                        });
+                                                });
+                                        });
+                                </script>
                         </div>
                         <div class="mb-3">
                                 <label for="feedback" class="form-label">Visszajelzés</label>

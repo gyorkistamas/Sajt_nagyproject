@@ -63,6 +63,21 @@
     font-size: 1em;
 }
 
+.view-button {
+    background-color: #5226cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
 .purchase-button:hover {
     background-color: #218838;
+}
+
+
+.view-button:hover {
+    background-color: #3c1c94;
 }

@@ -33,11 +33,11 @@ W.I.P
 
 ## 2.4 Mérföldkövek
 * 10.07. - Rendszerterv elkészítése
-* 10.xx. - Követelmény specifikáció elkészítése
-* 10.xx. - Funkcionális specifikáció elkészítése
-* 11.xx. - Front-end elkészítése
-* 11.xx. - Back-end elkészítése
-* 11.xx. - Előzetes tesztelések elkészítése
+* 10.14. - Követelmény specifikáció elkészítése
+* 10.21. - Funkcionális specifikáció elkészítése
+* 11.08. - Front-end elkészítése
+* 12.xx. - Előzetes tesztelések elkészítése
+* 12.xx. - Back-end elkészítése
 * 12.xx. - Prototípus elkészítése
 * 12.09. - Prototípus prezentálása
 

@@ -4,8 +4,7 @@ from django.db import models
 
 
     
-class Category(models.Model):
-    name = models.CharField(choices=[("magyar", "magyar")], max_length=100)
+
     
     
 class CartModel(models.Model):
@@ -14,7 +13,7 @@ class CartModel(models.Model):
     
 class CartItems(models.Model):
     cartId = models.ForeignKey('CartModel', on_delete=models.CASCADE)
-    itemId = models.ForeignKey('cart.Product', on_delete=models.CASCADE)
+    itemId = models.ForeignKey('itemManager.Product', on_delete=models.CASCADE)
     quantity = models.IntegerField()
 #     
 # 

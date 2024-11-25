@@ -84,7 +84,7 @@ h1 {
     text-align: center;
 }
 
-.checkout-button {
+.checkout-button .view-button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -94,6 +94,6 @@ h1 {
     font-size: 1em;
 }
 
-.checkout-button:hover {
+.checkout-button:hover .view-button:hover {
     background-color: #0056b3;
 }
