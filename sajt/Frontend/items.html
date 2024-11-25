@@ -3,24 +3,34 @@
 {% block items_css %}
 <link rel="stylesheet" type="text/css" href="{% static 'items_style.css' %}">
 {% endblock %}
+{% block filter %}
+
+{% endblock %}
 {% block content %}
 <div class="items-container">
-    {% for key,item in Items.items %}
+    {% if count <= 0 %}
+    <p> Nincsen termék ilyen név alatt </p>
+    {% else %}
+    {% for product in Items %}
         <div class="item-card">
             <form method="POST" action="{% url 'add_to_cart' %}">
             {% csrf_token %}
-            <img src="https://via.placeholder.com/150" alt="Item Image" class="item-image">
-            <h2 class="item-title">{{ item.Name }}</h2>
-            <p class="item-description">{{ item.Description }}</p>
-            <p class="item-price">{{ item.Price }} Ft</p>
+            <img src="https://scontent-vie1-1.xx.fbcdn.net/v/t39.30808-1/465395415_9130111913689842_3157756308784703638_n.jpg?stp=dst-jpg_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=50d2ac&_nc_ohc=FIsZmDQ_rzMQ7kNvgE7pWYx&_nc_zt=24&_nc_ht=scontent-vie1-1.xx&_nc_gid=AN9x03l6EAiVJEFUfnmrBTG&oh=00_AYAsZOTwYxgSCCc7WvrIvSdRHYX0KqF94KakrZ-llzPX_Q&oe=674A6F77" alt="Item Image" class="item-image">
+            <h2 class="item-title">{{ product.name }}</h2>
+            <p class="item-description">{{ product.description }}</p>
+            <p class="item-price">{{ product.price }} Ft/db</p>
+            {% if user.is_authenticated %}
             <div class="quantity-selector">
                 <label for="quantity">Darabszám:</label>
-                <input type="number" id="quantity-{{ key }}" name="quantity" min="1" max="{{ item.Stock }}" value="1"> db
+                <input type="number" id="quantity-{{ product.id }}" name="quantity" min="1" max="{{ product.stock }}" value="1"> db
             </div>
-            <input type="hidden" name="product_id" value="{{ key }}">
-            <button type="submit" class="purchase-button">Megveszem</button>
+            <input type="hidden" name="product_id" value="{{ product.id }}">
+            
+            <button href="" class="view-button">Megtekintés</button>
+            <button type="submit" class="purchase-button">Megveszem</button> {% endif %}
             </form>
         </div>
 {% endfor %}
+{% endif %}
 </div>
 {% endblock %}

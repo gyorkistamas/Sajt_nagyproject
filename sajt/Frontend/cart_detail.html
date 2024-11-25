@@ -13,9 +13,9 @@
         {% if cart %}
         {% for item in cart %}
         <div class="cart-item">
-            <img src="https://via.placeholder.com/100" alt="Item Image" class="cart-item-image">
+            <img src="{% if item.product.image is '' %}{{ item.product.image }}item.product.image{% else %}https://via.placeholder.com/100{% endif %}" alt="Item Image" class="cart-item-image">
             <div class="cart-item-details">
-                <h2 class="cart-item-title">{{ item.product.Name }}</h2>
+                <h2 class="cart-item-title">{{ item.product.name }}</h2>
                 <p class="cart-item-price">{{ item.product.price }} Ft</p>
                 <div class="cart-item-quantity">
                     <label for="quantity2">Mennyiség:</label>
