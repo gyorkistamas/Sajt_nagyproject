@@ -26,7 +26,43 @@
      </nav>
 
      <div class="container mt-5">
+        <h1 class="mb-4"Profilom></h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Felhazsnálói adatok</h4>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Név:</strong> John Doe</li>
+                    <li class="list-group-item"><strong>Email:</strong> JohnDoe@gmail.com</li>
+                    <li class="list-group-item"><strong>Telefonszám:</strong> 06 30 666 6969</li>
+                    <li class="list-group-item"><strong>Lakcím:</strong> Budapest, Fő utca 2.</li>
+                </ul>
+            </div>
 
+            <div class="col-md-6">
+                <h4>Adatok szerkesztése</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Név</label>
+                        <input type="text" class="form-control" id="name" placeholder="Add meg a neved!" value="John Doe">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Add meg az email címed!" value="JohnDoe@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                                <label for="phone" class="form-label">Telefonszám</label>
+                                <input type="tel" class="form-control" id="email" placeholder="Add meg a telefonszámod!" value="06 30 666 6969">
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Lakcím</label>
+                            <input type="text" class="form-control" id="address" placeholder="Add meg a Lakcímed" value="Budapest, Fő utca 2.">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Mentés</button>
+                    </div>
+                </form>
+            </div>
+        </div>
      </div>
+    
 </body>
 </html>
