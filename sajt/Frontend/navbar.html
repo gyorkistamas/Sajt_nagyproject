@@ -16,6 +16,9 @@
   {% url 'logout' as logout_url %}
   {% url 'register' as reg_url %}
   {% url 'items' as items_url %}
+  {% url 'profile' as profile_url %}
+
+  {% url 'admin' as admin_panel %}
       <nav class="navbar navbar-expand-lg navbar-light bg-light">            
         <a class="navbar-brand ml-2" href="{{ home_url }}">Sajtfanatikus Webshop</a>
     
@@ -61,11 +64,14 @@
               <span class="sr-only visually-hidden">Toggle</span>
             </button>
             <div class="dropdown-menu dropdown-menu-end">
-              <a class="dropdown-item" href="{{ items_url }}">Profilom</a>
+              <a class="dropdown-item" href="{{ profile_url }}">Profilom</a>
               <a class="dropdown-item" href="{{ items_url }}">Megrendeléseim</a>
               <a class="dropdown-item" href="{{ items_url }}">Kedvenc sajtjaim</a>
               <a class="dropdown-item" href="{{ items_url }}">Kosár</a>
               <a class="dropdown-item" href="{{ logout_url }}">Kilépés</a>
+              {% if user.level == "admin" or user.level == "developper" or user.level == "owner" %}
+              <a class="dropdown-item btn-warning" href="{{ admin_panel }}">Admin panel</a>
+              {% endif %}
             </div>
           </div>
 {% else %}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block admin_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin_style.css' %}">
+{% endblock %}
+{% block content %}
+{% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+{% endif %}
+<div class="admin-body">
+<h1>Felhasználó Lista</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Felhasználónév</th>
+                <th>Szint</th>
+                <th>Utolsó belépés</th>
+                <th>Keresztnév</th>
+                <th>Vezetéknév</th>
+                <th>Email</th>
+                <th>Csatlakozás</th>
+                <th>Aktív</th>
+                <th>MFA</th>
+                <th>Név változtatva</th>
+                <th>Utolsó bejelentkezés (IP)</th>
+                <th>Művelet</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user_id, user in users.items %}
+            <tr>
+                <form method="post" action="{% url 'admin_change_saveUser' user_id %}">
+                    {% csrf_token %}
+                <td>
+                    {{ user_id }}
+                </td>
+                <td>{{ user.username }}</td>
+                <td>
+                    <select name="level">
+                        <option value="member" {% if user.level == "user" %}selected{% endif %}>Tag</option>
+                        <option value="admin" {% if user.level == "admin" %}selected{% endif %}>Admin</option>
+                        <option value="developer" {% if user.level == "developer" %}selected{% endif %}>Fejlesztő</option>
+                        <option value="owner" {% if user.level == "owner" %}selected{% endif %}>Tulajdonos</option>
+                    </select>
+                </td>
+                <td>{{ user.last_login|date:"Y-m-d H:i:s" }}</td>
+                <td><input type="text" name="first_name" value="{{ user.first_name }}"></td>
+                <td><input type="text" name="last_name" value="{{ user.last_name }}"></td>
+                <td>                    
+                    <input type="email" name="new_email" value="{{ user.email }}" required>
+                    <button type="submit" class="btn btn-warning">Módosítás</button>                    
+                </td>
+                <td>{{ user.date_joined|date:"Y-m-d H:i:s" }}</td>                
+                <td>{% if user.is_active %} Aktív {% else %} Kitiltva {% endif %}</td>
+                <td><input type="checkbox" name="mfa" {% if user.mfa %}checked{% endif %}></td>
+                <td><input type="checkbox" name="is_name_modified" {% if user.is_name_modified %}checked{% endif %}></td>
+                <td>
+                    {% if user.last_login_ip == "None" %}
+                    {{ user.last_login_ip }}
+                    {% else %}
+                    <a href="#" >{{ user.last_login_ip }}</a>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if user.is_active %}
+                    <a type="button" class="btn btn-danger" href="#">Kitiltás</a>
+                    {% else %}
+                    <a type="button" class="btn btn-success" href="#">Kitiltás feloldása</a>
+                    {% endif %}
+                    <a type="button" class="btn btn-danger {% if user.is_active %}disabled{% endif %}" href="#">Törlés</a>                    
+                    <a type="button" class="btn btn-primary" href="#">Szerkesztés</a>
+                    <button type="submit" class="btn btn-primary">Mentés</button>
+                </td>
+            </form>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

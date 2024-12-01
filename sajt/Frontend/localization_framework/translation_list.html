@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Translations</h1>
+<a href="{% url 'add_translation' %}" class="btn btn-primary">Add Translation</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Key</th>
+            <th>Language</th>
+            <th>Text</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for translation in translations %}
+        <tr>
+            <td>{{ translation.id }}</td>
+            <td>{{ translation.key }}</td>
+            <td>{{ translation.language_code }}</td>
+            <td>{{ translation.text }}</td>
+            <td>
+                <a href="{% url 'edit_translation' translation.id %}" class="btn btn-warning">Edit</a>
+                <a href="{% url 'delete_translation' translation.id %}" class="btn btn-danger" 
+                   onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

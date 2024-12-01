@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Mass Delete Translations</h1>
+<form method="post">
+    {% csrf_token %}
+    <p>Enter keys to delete (one key per line)</p>
+    <textarea name="keys" rows="10" cols="80" required></textarea><br>
+    <button type="submit" class="btn btn-danger">Delete Translations</button>
+</form>
+{% endblock %}

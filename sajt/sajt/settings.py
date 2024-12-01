@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     ,'allauth.socialaccount'
     ,'allauth.socialaccount.providers.google'
     ,'itemManager'
-    ,
+    ,'K_localization_framework'
+    ,'session_engine'
 ]
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -78,8 +79,21 @@ MIDDLEWARE = [
     ,'django.contrib.messages.middleware.MessageMiddleware'
     ,'django.middleware.clickjacking.XFrameOptionsMiddleware'
     ,'allauth.account.middleware.AccountMiddleware'
-    ,
+    #,'K_localization_framework.middleware.LanguageMiddleware'
+    , 'session_engine.middleware.SessionEngineMiddleware'
+    , 'session_engine.middleware.CustomSessionAuthenticationMiddleware'
 ]
+
+Q_CLUSTER = {
+    'name': 'Django Q',
+    'workers': 4,
+    'timeout': 60,
+    'recycle': 500,
+    'retry': 300,
+    'queue_limit': 50,
+    'bulk': 10,
+    'orm': 'default'
+}
 
 ROOT_URLCONF = 'sajt.urls'
 

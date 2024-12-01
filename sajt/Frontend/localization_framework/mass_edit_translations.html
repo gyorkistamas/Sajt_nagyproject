@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Mass Edit Translations</h1>
+<form method="post">
+    {% csrf_token %}
+    <p>Enter translations in the format: `<key>|<language_code>|<new_text>` (one per line)</p>
+    <textarea name="translations_data" rows="10" cols="80" required></textarea><br>
+    <button type="submit" class="btn btn-warning">Edit Translations</button>
+</form>
+{% endblock %}

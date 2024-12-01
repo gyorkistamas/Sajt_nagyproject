@@ -1,0 +1,80 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-info, .item-card {
+    margin-bottom: 20px;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+}
+
+.item-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex: 1 1 calc(33% - 20px); /* Responsive width */
+    min-width: 300px; /* Minimum width to avoid too small cards */
+}
+
+.shipping-addresses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between addresses */
+}
+
+.shipping-address {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1 1 calc(50% - 10px); /* Two addresses per row */
+    min-width: 200px; /* Minimum width for address cards */
+}
+
+.shipping-address p {
+    margin: 0;
+}
+
+.edit-button, .view-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px; /* Space above buttons */
+}
+
+.edit-button:hover, .view-button:hover {
+    background-color: #0056b3;
+}
+
+.change-info-container {
+    display:flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.change-info-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
