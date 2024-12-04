@@ -23,6 +23,60 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
     }
+    .favorite-item:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px;
+
+    }
+    .favorite-item img{
+        width:100%;
+        height:auto;
+        border-radius: 10px;
+    }
+    .favorite-item .product-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top:15px;
+    }
+    .favorite-item .product-description{
+        font-size: 1rem;
+        color:#777;
+        margin: 10px 0;
+    }
+    .favorite-item .product-price{
+        color:#f39c12;
+        cursor: pointer;
+        font-size: 1rem;
+
+       
+    }
+    .remove-btn{
+            color: #e74c3c;
+            cursor:pointer;
+            font-size: 1rem;
+        }
+        .remove-btn:hover{
+            text-decoration: underline;
+        }
+        .section-title{
+            text-align: center;
+            font-size: 2.5rem;
+            color:#d35400;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .favorite-item .product-category{
+            font-size: 1rem;
+            color: #2c3e50;
+            font-weight: bold;
+            background-color: #ecf0f1;
+            padding: 5px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
  </style>
  <body>
     <div class="container favorive-section">
@@ -30,32 +84,32 @@
         <div class="row">
             <div class="col-md-4">
             <div class="favorite-item">
-                <img src="">
-                <div class="product-name"></div>
-                <div class="product-description"></div>
-                <div class="product-price"></div>
-                <div class="peoduct-category"></div>
+                <img src="kepek/camambert.jpg" alt="camambert">
+                <div class="product-name">Camambert</div>
+                <div class="product-description">Francia hagyományos, lágy, fehér penészes sajt, krémes belsővel.</div>
+                <div class="product-price">3,150 Ft</div>
+                
                 <span class="remove-btn">Eltávolítás</span>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="favorite-item">
-                <img src="">
-                <div class="product-name"></div>
-                <div class="product-description"></div>
-                <div class="product-price"></div>
-                <div class="peoduct-category"></div>
+                <img src="kepek/Sarga-cheddar-sajt2.jpeg" alt="Cheddar">
+                <div class="product-name">Cheddar</div>
+                <div class="product-description">Erős, karakteres ízű, angol eredetű sajt, remek ízesítőként.</div>
+                <div class="product-price">1,990 Ft</div>
+                
                 <span class="remove-btn">Eltávolítás</span>
             </div>
         </div>
         <div class="col-md-4">
             <div class="favorite-item">
-                <img src="">
-                <div class="product-name"></div>
+                <img src="kepek/gomolya2.jpg" alt="gomolya">
+                <div class="product-name">Gomolya</div>
                 <div class="product-description"></div>
-                <div class="product-price"></div>
-                <div class="peoduct-category"></div>
+                <div class="product-price">2,890 Ft</div>
+                
                 <span class="remove-btn">Eltávolítás</span>
             </div>
         </div>
