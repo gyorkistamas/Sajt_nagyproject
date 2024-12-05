@@ -1,14 +1,14 @@
-### Bejelentkezés / regisztráció tesztelése
+### Bejelentkezés tesztelése
 
-**Tesztelő:** Teszt Elek
+**Tesztelő:** Kiss Péter
 
-**Tesztelés dátuma:** 2022.10.09
+**Tesztelés dátuma:** 2024.12.05
 
 
 | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
-| ASD_001 | Regisztráció esetén mezők hiányos kitöltése. | Az oldal figyelmeztet a hiányosságokra. | Megegyzik a várt eredménnyel. | Nem találtam hibát. |
-
+| LOGIN_001 | Login oldal betöltése | Az oldal helyesen betöltődik, a design és a mezők megjelennek. | Megegyzik a várt eredménnyel. | Az oldal minden elem helyesen látható. |
+| LOGIN_002 | Hibás felhasználónév és jelszó megadása | A "Helytelen felhasználónév vagy jelszó" hibaüzenet jelenik meg. | Megegyezik a várt eredménnyel. | A hibaüzenet megfelelően megjelenik. |
 &nbsp;
 
 ### Termék hozzáadása tesztelése
@@ -46,3 +46,10 @@
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
 | KEDV_001 | Kedvencek oldal betöltése | A "Kedvenc Sajtok" cím jelenik meg a böngésző fülén. | Megegyezik a várt eredménnyel. | Az oldal betöltődött, a cím megfelelően megjelenik.|
+
+### Fizetés tesztelés
+**Tesztelő:** Kiss Péter
+**Tesztelés dátuma:** 2024.12.04.
+ | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
+|------------|------------|---------------|--------------------|------------|
+| PAY_001 | Fizetési oldalra navigálás bejelentkezés nélkül. | Az oldal visszairányít a bejelentkezésre. | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
