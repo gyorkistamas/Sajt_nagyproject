@@ -49,7 +49,14 @@
 
 ### Fizetés tesztelés
 **Tesztelő:** Kiss Péter
-**Tesztelés dátuma:** 2024.12.04.
+**Tesztelés dátuma:** 2024.12.05.
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
 | PAY_001 | Fizetési oldalra navigálás bejelentkezés nélkül. | Az oldal visszairányít a bejelentkezésre. | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
+
+### Elfelejtett Jelszó  tesztelés
+**Tesztelő:** Kiss Péter
+**Tesztelés dátuma:** 2024.12.05.
+ | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
+|------------|------------|---------------|--------------------|------------|
+| TC_001 | Üres mezők kitöltése nélkül a "Küldés" gombra kattintás. | Hibaüzenet: "Minden mezőt ki kell tölteni." | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
