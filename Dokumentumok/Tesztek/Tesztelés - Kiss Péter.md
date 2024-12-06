@@ -11,17 +11,6 @@
 | LOGIN_002 | Hibás felhasználónév és jelszó megadása | A "Helytelen felhasználónév vagy jelszó" hibaüzenet jelenik meg. | Megegyezik a várt eredménnyel. | A hibaüzenet megfelelően megjelenik. |
 &nbsp;
 
-### Termék hozzáadása tesztelése
-
-**Tesztelő:** Teszt Elek
-
-**Tesztelés dátuma:** 2022.10.09
-
-
-| Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
-|------------|------------|---------------|--------------------|------------|
-| ASD_010 | Termék hozzáadása oldalra navigálás bejelentkezés nélkül. | Az oldal visszairányít a bejelentkezésre. | Megegyezik az elvárt eredménnyel. | Nem találtam hibát. |
-
 
 ### Vásárlói visszajelzés funkció tesztelése
 **Tesztelő:** Kiss Péter
@@ -60,3 +49,12 @@
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
 | TC_001 | Üres mezők kitöltése nélkül a "Küldés" gombra kattintás. | Hibaüzenet: "Minden mezőt ki kell tölteni." | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
+
+
+### Rendelések  tesztelés
+**Tesztelő:** Kiss Péter
+**Tesztelés dátuma:** 2024.12.06.
+ | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
+|------------|------------|---------------|--------------------|------------|
+| ORD_001 | Egy termék részleteinek megtekintése. | A "Részletek" gombra kattintás a megfelelő termék részletes oldalára navigál. | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
+| ORD_002 | Több termék képeinek helyes megjelenítése. | Az összes kép megfelelően jelenik meg a megadott méretben és elrendezésben. | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
