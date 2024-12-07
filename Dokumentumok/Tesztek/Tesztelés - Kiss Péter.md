@@ -9,7 +9,7 @@
 |------------|------------|---------------|--------------------|------------|
 | LOGIN_001 | Login oldal betöltése | Az oldal helyesen betöltődik, a design és a mezők megjelennek. | Megegyzik a várt eredménnyel. | Az oldal minden elem helyesen látható. |
 | LOGIN_002 | Hibás felhasználónév és jelszó megadása | A "Helytelen felhasználónév vagy jelszó" hibaüzenet jelenik meg. | Megegyezik a várt eredménnyel. | A hibaüzenet megfelelően megjelenik. |
-&nbsp;
+
 
 
 ### Vásárlói visszajelzés funkció tesztelése
@@ -67,4 +67,13 @@
 |------------|------------|---------------|--------------------|------------|
 | REG_001 | Üres felhasználónév mező | Hibaüzenet: "Felhasználónév megadása kötelező." | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
 | REG_002 | Helytelen email-formátum (email: "rosszformátum") | Hibaüzenet: "Az email cím érvénytelen." | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
+
+
+### Navbar tesztelés
+**Tesztelő:** Kiss Péter
+**Tesztelés dátuma:** 2024.12.07.
+ | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
+|------------|------------|---------------|--------------------|------------|
+| NAV_001 | Navigációs menü megjelenítése bejelentkezett felhasználóval | Minden menüpont elérhető (Főoldal, Áruk, Kosár, Rendeléseim, Rólunk, Kapcsolat, Fiókom) | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
+| NAV_002 | Navigációs menü megjelenítése be nem jelentkezett felhasználóval | Minden menüpont elérhető (Főoldal, Áruk, Rólunk, Kapcsolat, Bejelentkezés, Regisztráció) | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
 
