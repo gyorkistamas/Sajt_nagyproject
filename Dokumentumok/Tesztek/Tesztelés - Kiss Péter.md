@@ -14,6 +14,7 @@
 
 ### Vásárlói visszajelzés funkció tesztelése
 **Tesztelő:** Kiss Péter
+
 **Tesztelés dátuma:** 2024.12.04.
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
@@ -23,6 +24,7 @@
 
 ### Profil tesztelés
 **Tesztelő:** Kiss Péter
+
 **Tesztelés dátuma:** 2024.12.04.
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
@@ -31,6 +33,7 @@
 
 ### Kedvencek tesztelés
 **Tesztelő:** Kiss Péter
+
 **Tesztelés dátuma:** 2024.12.04.
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
