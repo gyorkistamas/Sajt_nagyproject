@@ -58,3 +58,13 @@
 |------------|------------|---------------|--------------------|------------|
 | ORD_001 | Egy termék részleteinek megtekintése. | A "Részletek" gombra kattintás a megfelelő termék részletes oldalára navigál. | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
 | ORD_002 | Több termék képeinek helyes megjelenítése. | Az összes kép megfelelően jelenik meg a megadott méretben és elrendezésben. | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
+
+
+### Regisztráció tesztelés
+**Tesztelő:** Kiss Péter
+**Tesztelés dátuma:** 2024.12.07.
+ | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
+|------------|------------|---------------|--------------------|------------|
+| REG_001 | Üres felhasználónév mező | Hibaüzenet: "Felhasználónév megadása kötelező." | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
+| REG_002 | Helytelen email-formátum (email: "rosszformátum") | Hibaüzenet: "Az email cím érvénytelen." | Megegyezik a várt eredménnyel. | Nem találtam hibát.|
+
