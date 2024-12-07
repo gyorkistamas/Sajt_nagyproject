@@ -41,6 +41,7 @@
 
 ### Fizetés tesztelés
 **Tesztelő:** Kiss Péter
+
 **Tesztelés dátuma:** 2024.12.05.
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
@@ -48,6 +49,7 @@
 
 ### Elfelejtett Jelszó  tesztelés
 **Tesztelő:** Kiss Péter
+
 **Tesztelés dátuma:** 2024.12.05.
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
@@ -56,6 +58,7 @@
 
 ### Rendelések  tesztelés
 **Tesztelő:** Kiss Péter
+
 **Tesztelés dátuma:** 2024.12.06.
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
@@ -65,6 +68,7 @@
 
 ### Regisztráció tesztelés
 **Tesztelő:** Kiss Péter
+
 **Tesztelés dátuma:** 2024.12.07.
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
@@ -74,6 +78,7 @@
 
 ### Navbar tesztelés
 **Tesztelő:** Kiss Péter
+
 **Tesztelés dátuma:** 2024.12.07.
  | Teszt szám | Teszt eset | Várt eredmény | Tényleges Eredmény | Megjegyzés |
 |------------|------------|---------------|--------------------|------------|
