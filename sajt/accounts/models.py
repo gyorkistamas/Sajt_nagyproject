@@ -103,3 +103,15 @@ class saved_Shipment(models.Model):
     
     def __str__(self):
         return f"{self.userId}\t{self.id}"
+    
+class Orders(models.Model):
+    userId = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    order_date = models.DateField(auto_now_add=False, blank=True, null=False)
+    
+class OrdersItems(models.Model):
+    orderId = models.ForeignKey(Orders, on_delete=models.CASCADE)
+    productId = models.ForeignKey('itemManager.Product', on_delete=models.CASCADE)
+    quantity = models.IntegerField()
+    
+    def __str__(self):
+        return f"{self.orderId}\t{self.productId}\t{self.quantity}"

@@ -1,7 +1,6 @@
-<head>
-    <title>Rendelések</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+{% extends 'base.html' %}
+{% load static %}
+{% block order_style_css %}
 <style>
     img{
         width: 150px;
@@ -14,17 +13,18 @@
         text-align: center;
     }
 </style>
-<body>
+{% endblock %}
+{% block content %}
     <div class="container mt-5 col-md-4 card bg-light" >
         <div class="row card-body">
             <div class="col">
-                <img src="kepek/Appenzeller.jpg">
+                <img style="width: 150px; height: auto; border-radius: 10px;" src="{% static 'kepek/Appenzeller.jpg' %}">
             </div>
             <div class="col"> 
                 <div class=" card-body fs-5 fw-bold">
                 <h5>Appenzeller</h5>
                 <p>1db</p>
-                <a href="productc.html" class="btn btn-primary">Megtekintés</a>
+                <a href="#" class="btn btn-primary">Megtekintés</a>
                 </div>
             </div>
         </div>
@@ -33,13 +33,13 @@
     <div class="container mt-3 col-md-4 card bg-light" >
         <div class="row card-body">
             <div class="col">
-                <img src="kepek/gomolya.png">
+                <img style="width: 150px; height: auto; border-radius: 10px;" src="{% static 'kepek/gomolya.png' %}">
             </div>
             <div class="col"> 
                 <div class=" card-body fs-5 fw-bold">
                 <h5>Gomolya</h5>
                 <p>3db</p>
-                <a href="" class="btn btn-primary">Megtekintés</a>
+                <a href="#" class="btn btn-primary">Megtekintés</a>
                 </div>
             </div>
         </div>
@@ -50,5 +50,4 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+{% endblock %}

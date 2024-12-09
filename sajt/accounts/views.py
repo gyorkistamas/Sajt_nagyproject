@@ -54,11 +54,11 @@ def login_view(request):
                 return respo
             else:
                 error = True
-                messages.error(request, f"Helytelen jelszó DEBUG:{user is not None} us:{username} pw:{password} van?:{CustomUser.objects.filter(username=username).exists()}")
+                messages.error(request, f"Helytelen jelszó ")
                 return render(request, 'login.html', {"error": error})
         except Exception as e:
             error = True
-            messages.error(request, f"Nincs ilyen felhasználó  DEBUG:{user is not None} us:{username} pw:{password} van?:{CustomUser.objects.filter(username=username).exists()} EXCEPTION:{e}")
+            messages.error(request, f"Nincs ilyen felhasználó   EXCEPTION:{e}")
             render(request, 'login.html', {"error": error})
     return render(request, 'login.html', {"error": error})
 # Create your views here.
@@ -140,7 +140,7 @@ def lost_pwd_view(request):
             success = True
             return render(request, 'forgot_password.html', {"error":error, "success":success})
         except:
-            messages.error(request, f"Nincs ilyen felhasználó us:{username} email:{email}")
+            messages.error(request, f"Nincs ilyen felhasználó ")
             error = True
             return render(request, 'forgot_password.html', {"error":error, "success":success})
     return render(request, 'forgot_password.html', {"error":error, "success":success})

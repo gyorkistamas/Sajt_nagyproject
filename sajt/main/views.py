@@ -6,6 +6,8 @@ from .models import Cart, CartItems
 from itemManager.models import Product
 from django.conf import settings
 from django.contrib import messages
+from accounts.models import Orders, OrdersItems, CustomUser
+
 
 
 def index(request):
@@ -127,6 +129,22 @@ def cart_decrease_item(request, product_id):
             messages.error(request=request,message=f"Cart not found! id:{product_id}")
     return redirect('cart_detail')
 
+@login_required
+def order_detail(request):
+    try:
+        order = Orders.objects.get(userId=request.user.id)
+        if order:
+            order_items = OrdersItems.objects.filter(order=order.id)
+            if order_items:
+                return render(request, 'order_details.html', {'order_items': order_items, 'isNew':False})
+            else:
+                messages.error(request, "Hiba történt!")
+                return render(request, 'order_details.html', {'order_items': None, 'isNew':False})
+        else:
+            return render(request, 'order_details.html', {"order_items":None, 'isNew':True})
+    except Exception as e:
+        messages.error(request, e)
+        return render(request, 'order_details.html', {"order_items":None, 'isNew':True})
 
 
                 

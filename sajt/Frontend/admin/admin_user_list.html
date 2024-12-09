@@ -72,7 +72,7 @@
                     {% else %}
                     <a type="button" class="btn btn-success" href="#">Kitiltás feloldása</a>
                     {% endif %}
-                    <a type="button" class="btn btn-danger {% if user.is_active %}disabled{% endif %}" href="{% url 'admin_change_deleteUser' user_id %}">Törlés</a>                    
+                    <a type="button" class="btn btn-danger" href="{% url 'admin_change_deleteUser' user_id %}">Törlés</a>                    
                     <a type="button" class="btn btn-primary" href="#">Szerkesztés</a>
                     <button type="submit" class="btn btn-primary">Mentés</button>
                 </td>

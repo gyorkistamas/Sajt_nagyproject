@@ -32,12 +32,13 @@
         </div>
     </div>
 
-        <div class="cart-summary">
-            <h2>Összesen: {{ cart.total_price }}</h2>
-            <button class="checkout-button">Proceed to Checkout</button>
-        </div>
-    </div>
-    {% endfor %}
+
+{% endfor %}
+<div class="cart-summary">
+    <h2>Összesen: {{ cart.total_price }}</h2>
+    <button class="checkout-button">Vásárlás befejezése</button>
+</div>
+</div>
     {% else %}
         <p>még üres a kosarad</p>
     {% endif %}

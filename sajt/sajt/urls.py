@@ -47,6 +47,7 @@ urlpatterns = [
     ,path('accounts/admin/edit/saveUser/<int:userId>/', acc_views.admin_change_saveUser, name='admin_change_saveUser')
     ,path('accounts/admin/delete/<int:userId>/', acc_views.admin_change_deleteUser, name='admin_change_deleteUser')
     ,path('accounts/admin/translations/', locale_views.translation_list, name='translation_list')
+    ,path('accounts/orders/order_detail', views.order_detail, name='order_detail')
     # ,path('accounts/admin/translations/add/', locale_views.translation_add, name='add_translation')
     # ,path('accounts/admin/translations/edit/<int:pk>/', locale_views.translation_edit, name='edit_translation')
     # ,path('accounts/admin/translations/delete/<int:pk>/', locale_views.translation_delete, name='delete_translation')
