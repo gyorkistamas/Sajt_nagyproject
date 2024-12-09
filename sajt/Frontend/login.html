@@ -41,7 +41,7 @@
         </div>
         <div class="login-form-group">
           <label for="pwd">Jelszó: <span class="required-star"></span></label>
-          <input autocomplete="off" type="text" placeholder="Legalább 8 karakter" name="pwd" id="pwd">
+          <input autocomplete="off" type="password" placeholder="Legalább 8 karakter" name="pwd" id="pwd">
         </div>
         
         {% url 'index' as home_url %}
@@ -53,9 +53,8 @@
         </div>
         <a onclick="this.closest('form').submit();return false;" href="#" class="rounded-button login-cta">Belépés</a>
     </form>
-        <a href="{{ home_url }}" class="rounded-button login-cta exit-cta">Vissza</a>
         </div>
-        <div class="register-div">Még nem regisztráltál? <a href="#" class="link create-account" -link>Készíts egy fiókot most !</a></div>
+        <div class="register-div">Még nem regisztráltál? <a href="{% url 'register' %}" class="link create-account" -link>Készíts egy fiókot most !</a></div>
       </div>
     </div>
       {% endblock %}

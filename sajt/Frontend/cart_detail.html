@@ -11,29 +11,35 @@
     <div class="cart-container">
         <h1>Your Shopping Cart</h1>
         {% if cart %}
-        {% for item in cart %}
+        {% for item in cart.values %}
         <div class="cart-item">
-            <img src="{% if item.product.image is '' %}{{ item.product.image }}item.product.image{% else %}https://via.placeholder.com/100{% endif %}" alt="Item Image" class="cart-item-image">
+            <form method="POST" action="{% url 'cart_remove' %}">
+                {% csrf_token %}
+                <input type="hidden" name="product_id" value="{{ item.id }}">
+            <img src="{% if item.product_image is '' %}{{ item.product_image }}{% else %}https://via.placeholder.com/100{% endif %}" alt="Item Image" class="cart-item-image">
             <div class="cart-item-details">
-                <h2 class="cart-item-title">{{ item.product.name }}</h2>
-                <p class="cart-item-price">{{ item.product.price }} Ft</p>
+                <h2 class="cart-item-title">{{ item.product_name }}</h2>
+                <p class="cart-item-price">{{ item.product_price }} Ft</p>
                 <div class="cart-item-quantity">
                     <label for="quantity2">Mennyiség:</label>
-                    <input type="number" id="quantity2" name="quantity2" min="1" max="{{ item.product.stock }}" value="{{ item.quantity }}">
+                    <input type="number" id="quantity2" name="quantity2" min="1" max="{{ item.product_stock }}" value="{{ item.quantity }}">
                 </div>
                 <p class="cart-item-subtotal">Összesen: {{ item.total_price }}</p>
-                <button href="{% url 'cart_remove' item.product.id %}" class="remove-button">Eltávolítás</button>
-            </div>
+                <button type="submit" class="remove-button">
+                    Eltávolítás
+                </button>
+            </form>
         </div>
+    </div>
 
         <div class="cart-summary">
             <h2>Összesen: {{ cart.total_price }}</h2>
             <button class="checkout-button">Proceed to Checkout</button>
         </div>
-        </div>
-        {% endfor %}
-        {% else %}
-        <p>még üres a kosarad</p>
-        {% endif %}
     </div>
+    {% endfor %}
+    {% else %}
+        <p>még üres a kosarad</p>
+    {% endif %}
+</div>
 {% endblock %}

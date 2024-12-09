@@ -1,20 +1,16 @@
-from pyexpat import model
 from django.db import models
+from accounts.models import CustomUser
+from itemManager.models import Product
 # Create your models here.
 
-
-    
-
-    
-    
-class CartModel(models.Model):
-    user = models.ForeignKey('accounts.CustomUser', on_delete=models.CASCADE)
-    price = models.IntegerField()
+class Cart(models.Model):
+    userId = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    status = models.CharField(choices=(["PENDING", "PENDING"], ["SUCCESS", "SUCCESS"], ["FAILED", "FAILED"]), max_length=10, default="PENDING")
     
 class CartItems(models.Model):
-    cartId = models.ForeignKey('CartModel', on_delete=models.CASCADE)
-    itemId = models.ForeignKey('itemManager.Product', on_delete=models.CASCADE)
-    quantity = models.IntegerField()
+    cartId = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    itemId = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.IntegerField(default=1)
 #     
 # 
 # class Payment(models.Model):

@@ -17,6 +17,7 @@
   {% url 'register' as reg_url %}
   {% url 'items' as items_url %}
   {% url 'profile' as profile_url %}
+  {% url 'cart_detail' as cart_url %}
 
   {% url 'admin' as admin_panel %}
       <nav class="navbar navbar-expand-lg navbar-light bg-light">            
@@ -31,7 +32,7 @@
 
           <div class="nav-item dropdown btn-group">
             <a type="button" class="nav-link btn {% if request.path == items_url %}active{% endif %}" href="{{ items_url }}">Áruk</a>
-            <button type="button" class="nav-link btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="nav-link btn dropdown-toggle dropdown-toggle-split {% if request.path == items_url %}active{% endif %}" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="sr-only visually-hidden">Toggle</span>
             </button>
             <div class="dropdown-menu dropdown-menu-end">
@@ -40,11 +41,7 @@
               <a class="dropdown-item" href="{{ items_url }}">Sajt kiegészítők</a>
             </div>
           </div>
-{% if user.is_authenticated %}
-          <li class="nav-item">
-              <a class="nav-link {% if request.path == cart_url %}active{% endif %}" href="{{ cart_url }}">Kosár</a>
-          </li>    
-
+{% if user.is_authenticated %}   
           <li class="nav-item">
               <a class="nav-link {% if request.path == orders_url %}active{% endif %}" href="{{ orders_url }}">Rendeléseim</a>
           </li>  
@@ -59,7 +56,7 @@
 
 {% if user.is_authenticated %}
           <div class="nav-item dropdown btn-group">
-            <a type="button" class="nav-link btn" href="#q">Fiókom</a>
+            <a type="button" class="nav-link btn" href="{{ profile_url }}">Fiókom</a>
             <button type="button" class="nav-link btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="sr-only visually-hidden">Toggle</span>
             </button>
@@ -67,7 +64,7 @@
               <a class="dropdown-item" href="{{ profile_url }}">Profilom</a>
               <a class="dropdown-item" href="{{ items_url }}">Megrendeléseim</a>
               <a class="dropdown-item" href="{{ items_url }}">Kedvenc sajtjaim</a>
-              <a class="dropdown-item" href="{{ items_url }}">Kosár</a>
+              <a class="dropdown-item" href="{{ cart_url }}">Kosár</a>
               <a class="dropdown-item" href="{{ logout_url }}">Kilépés</a>
               {% if user.level == "admin" or user.level == "developper" or user.level == "owner" %}
               <a class="dropdown-item btn-warning" href="{{ admin_panel }}">Admin panel</a>
@@ -79,7 +76,7 @@
             <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ login_url }}">Bejelentkezés</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if request.path == login_url %}active{% endif %}" href="{{ reg_url }}">Regisztáció</a>
+            <a class="nav-link {% if request.path == reg_url %}active{% endif %}" href="{{ reg_url }}">Regisztáció</a>
           </li>
 {% endif %}
        

@@ -27,8 +27,22 @@
                     <h5 class="card-title">Hagyj egy visszajelzést</h5>
                     <form>
                         <div class="mb-3">
-                                <label for="username" class="form-label">Értékelés</label>
-                                
+                                <label for="username" class="form-label">Név</label>
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star1" onmouseover="this.src='kepek/feedback/full-star.png'" onmouseout="this.src='kepek/feedback/empty-star.png'">
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star2">
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star3">
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star4">
+                                <img src="kepek/feedback/empty-star.png" class="star" id="star5">
+                                <script>
+                                        const stars = document.querySelectorAll('.star');
+                                        stars.forEach((star, index) => {
+                                                star.addEventListener('onmouseover', () => {
+                                                        for (let i = 0; i <= index; i++) {
+                                                                stars[i].src = 'kepek/feedback/full-star.png';
+                                                        }
+                                                });
+                                        });
+                                </script>
                         </div>
                         <div class="mb-3">
                                 <label for="feedback" class="form-label">Visszajelzés</label>

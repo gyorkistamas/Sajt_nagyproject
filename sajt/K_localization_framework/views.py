@@ -3,7 +3,6 @@ from django.core.cache import cache
 from django.http import JsonResponse
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, render
-from flask import redirect
 from .models import Translation
 
 def add_translation(request):

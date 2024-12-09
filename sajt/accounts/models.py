@@ -22,7 +22,7 @@ class CustomUser(AbstractUser):
     is_name_modified = models.BooleanField(default=False)   
     phone = models.CharField(max_length=15, null=True, blank=True) 
     selected_shipment = models.ForeignKey('accounts.saved_Shipment', on_delete=models.CASCADE, null=True, blank=True)
-    is_authenticated = models.BooleanField(default=False)
+    #is_authenticated = models.BooleanField(default=False)
     def has_perm(self, perm, obj=None):
         pass
     
@@ -32,22 +32,18 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.username
     
-    @property   
-    def is_authenticated(self, request):
-        if not self.is_active:
-            return False
-        #if self.is_authenticated:
-        #    return True
-        
-        session = CustomSession.objects.filter(user=request.user)
-        if not session.is_expired():   
-            self.is_authenticated = True
-            self.save()
-            return True
-        else:
-            self.is_authenticated = False
-            self.save()
-            return False
+   # @property   
+   # def is_auth(self):
+   #     if not self.is_active:
+   #         return False
+   #     return self.is_auth
+   # 
+   # @is_auth.setter
+   # def is_auth(self, value):
+   #     if self.is_active:
+   #         self.is_auth = value
+   #     else:
+   #         self.is_auth = False
     
 class PasswordResetToken(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

@@ -4,15 +4,13 @@ from re import U
 from urllib import response
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import logout
-from httpx import RequestError
-
 from session_engine.models import CustomSession
 from .models import CustomUser, PasswordResetToken, saved_Shipment
 from django.urls import reverse
 from django.utils import timezone
 from django.core.mail import send_mail
-from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.decorators import login_required
 from session_engine.utils import create_session, get_session
@@ -45,8 +43,10 @@ def login_view(request):
         try:
             user = authenticate(request=request, username=username, password=password)
             if user is not None:
-                login(request, user) # default to get django benefits
-                
+                login(request, user)
+                _user = CustomUser.objects.get(username=username)
+                _user.is_auth = True
+                _user.save()
                 session_key = create_session(user)
                 respo = redirect('/')
                 respo.set_cookie('session_key', session_key, httponly=True, secure=True)                
@@ -54,11 +54,11 @@ def login_view(request):
                 return respo
             else:
                 error = True
-                messages.error(request, "Helytelen jelszó")
+                messages.error(request, f"Helytelen jelszó DEBUG:{user is not None} us:{username} pw:{password} van?:{CustomUser.objects.filter(username=username).exists()}")
                 return render(request, 'login.html', {"error": error})
-        except:
+        except Exception as e:
             error = True
-            messages.error(request, f"Nincs ilyen felhasználó")
+            messages.error(request, f"Nincs ilyen felhasználó  DEBUG:{user is not None} us:{username} pw:{password} van?:{CustomUser.objects.filter(username=username).exists()} EXCEPTION:{e}")
             render(request, 'login.html', {"error": error})
     return render(request, 'login.html', {"error": error})
 # Create your views here.
@@ -82,7 +82,7 @@ def reg_view(request):
             error = True
             return render(request, 'reg.html', {"error":error})
         if not (("@" and ".") in email):
-            messages.error(request, "Nem valós email!")
+            messages.error(request, "Nem megfelelő email formátum!")
             error = True
             return render(request, 'reg.html', {"error":error})
         if CustomUser.objects.filter(username=username).exists():
@@ -95,12 +95,18 @@ def reg_view(request):
             return render(request, 'reg.html', {"error":error})
         
         try:
-            CustomUser.objects.create_user(username=username, email=email, password=password, date_joined=timezone.now(), level="member", is_active=True, is_staff=False, is_superuser=False, first_name="", last_name="", dark_mode=False, last_login_ip=get_client_ip(request), mfa=False, mfa_secret="", is_name_modified=False)
+            newUser = CustomUser.objects.create_user(username=username, email=email, password=password, date_joined=timezone.now(), level="member", is_active=True, is_staff=False, is_superuser=False, first_name="", last_name="", dark_mode=False, last_login_ip=get_client_ip(request), mfa=False, mfa_secret="", is_name_modified=False, is_auth=True, phone="")
             messages.success(request, "Sikeres regisztráció")
-            return redirect('login')
-        except:
+            session_key = create_session(newUser)
+            respo = redirect('/')
+            respo.set_cookie('session_key', session_key, httponly=True, secure=True)
+            newUser.is_authenticated = True
+            newUser.save()
+            return respo
+        except Exception as e:
             messages.error(request, "Nem sikerult regisztrálni")
             error = True
+            print(f"Sikertelen regisztráció: {e}")
             return render(request, "reg.html", {"error":error})
     return render(request, 'reg.html', {"error":error})
 
@@ -327,3 +333,54 @@ def admin_change_saveUsers(request):
     else:
         messages.error(request, f"Ismeretlen hiba történt")
     return redirect('admin')
+
+@login_required
+def admin_change_deleteUser(request, userId):
+    if not request.user.is_staff:
+        return redirect("/")
+    if userId != request.user.id:
+        try:
+            user = CustomUser.objects.get(id=userId)
+            if user.level == "member":
+                user.delete()
+            elif request.level == "admin" or request.level == "owner":
+                user.delete()
+            else:
+                messages.error(request, "Nem törölhetsz staff felhasználót a jelenlegi jogosultságoddal!")
+            messages.success(request, f"Felhasználó sikeresen törölve!")
+            return redirect('admin')
+        except Exception as e:
+            messages.error(request, e)
+            messages.error(request, f"ID: {userId}")
+            return redirect('admin')
+    else:
+        messages.error(request, f"Nem törölheted a saját felhasználódat!")
+        
+@login_required
+def admin_change_disableUser(request, userId):
+    if not request.user.is_staff:
+        return redirect("/")
+    if userId != request.user.id:
+        try:
+            user = CustomUser.objects.get(id=userId)
+            if user.level == "member":
+                user.is_active = False
+                user.is_auth = False
+                user.save()
+                
+            elif request.level == "admin" or request.level == "owner":
+                user.is_active = False
+                user.is_auth = False
+                user.save()
+                
+            else:
+                messages.error(request, "Nem tilthatsz staff felhasználót a jelenlegi jogosultságoddal!")
+            
+            
+            messages.success(request, f"Felhasználó sikeresen letiltva!")
+            return redirect('admin')
+        except Exception as e:
+            print(e)
+            messages.error(request, e)
+            messages.error(request, f"ID: {userId}")
+            return redirect('admin')

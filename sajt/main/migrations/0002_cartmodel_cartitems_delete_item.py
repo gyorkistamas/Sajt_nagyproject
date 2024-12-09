@@ -8,7 +8,6 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cart', '0001_initial'),
         ('main', '0001_initial'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]

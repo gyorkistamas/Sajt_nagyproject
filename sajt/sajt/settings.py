@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     # own app
     ,'main'    
     ,'accounts'
-    ,'cart.apps.CartConfig'
     ,'django.contrib.sites'
     ,'allauth'
     ,'allauth.account'
@@ -69,7 +68,7 @@ SOCIALACCOUNT_PROVIDERS = {
 SOCIALACCOUNT_LOGIN_ON_GET=True
 SOCIALACCOUNT_LOGOUT_ON_GET=True
 AUTH_USER_MODEL = "accounts.CustomUser"
-
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Default
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware'
     ,'django.contrib.sessions.middleware.SessionMiddleware'
