@@ -86,17 +86,17 @@ A webshop célja, hogy felhasználóbarát környezetet biztosítson, ahol a fel
 ### Nem funkcionális követelmények
 #### Teljesítmény
 
-## Rendelkezésre állás:
+# Rendelkezésre állás:
 
 - A webshop rendelkezésre állása éves szinten legalább 99,9% kell legyen.
 
 - Karbantartási ablakokat megfelelően kell ütemezni, és ezek időtartama nem haladhatja meg az összes leállási idő 0,1%-át.
 
-## Terheléses tesztelés:
+# Terheléses tesztelés:
 
 - A rendszer teljesítményét rendszeresen kell tesztelni különböző terhelési szinteken, és az eredményeket dokumentálni kell a fejlesztési iterációk során.
 
-## Hálózati teljesítmény:
+# Hálózati teljesítmény:
 
 - A webshop minimális sávszélesség-igénye ne haladja meg a 2 Mbps-ot egyetlen felhasználóra nézve, normál használat mellett.
 
